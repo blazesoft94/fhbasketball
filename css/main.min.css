@@ -3965,7 +3965,7 @@ body textarea:required:valid {
 .mfp-preloader {
     width: 30px !important;
     height: 30px !important;
-    background-color: #ff7e00;
+    background-color: #007691;
     opacity: 1;
     margin: 0 auto;
     -webkit-animation: rotateplane 1.2s infinite ease-in-out;
@@ -4156,11 +4156,11 @@ body textarea:required:valid {
 }
 
 .block-Teams .b-hover-team:hover .oblique-block i {
-    color: #ff7e00
+    color: #007691
 }
 
 .block-Teams .b-hover-team:hover h3 {
-    color: #ff7e00
+    color: #007691
 }
 
 .block-Teams .teams-content .b-inner-content-wrap {
@@ -4174,7 +4174,7 @@ body textarea:required:valid {
     float: left;
     height: 120px;
     width: 162px;
-    background-color: #ff7e00;
+    background-color: #007691;
     -webkit-transform: skew(-23deg);
     -ms-transform: skew(-23deg);
     transform: skew(-23deg);
@@ -4321,7 +4321,7 @@ body textarea:required:valid {
 }
 
 .block-Schedule .btn.btn-link-g:hover {
-    border: 2px solid #ff7e00
+    border: 2px solid #007691
 }
 
 .block-Schedule .btn.btn-link-g:active {
@@ -4338,7 +4338,7 @@ body textarea:required:valid {
 }
 
 .block-Schedule .btn.on {
-    border: 2px solid #ff7e00;
+    border: 2px solid #007691;
     background-color: #fff
 }
 
@@ -4491,7 +4491,7 @@ body textarea:required:valid {
 }
 
 .b-wrap-Coaches .carousel-wrap-coaches .owl-nav.disabled>div:hover {
-    color: #ff7e00
+    color: #007691
 }
 
 .b-wrap-Coaches .carousel-wrap-coaches .owl-nav.disabled>div.owl-next {
@@ -4500,7 +4500,7 @@ body textarea:required:valid {
 }
 
 .carousel-item-coaches:hover .car-text-wrap h4 {
-    color: #ff7e00
+    color: #007691
 }
 
 .carousel-item-coaches:hover .car-text-wrap h5 {
@@ -4595,7 +4595,7 @@ body textarea:required:valid {
 }
 
 .block-News .carousel-wrap-news .owl-nav.disabled>div:hover {
-    color: #ff7e00
+    color: #007691
 }
 
 .block-News .carousel-wrap-news .owl-nav.disabled>div.owl-next {
@@ -4612,7 +4612,7 @@ body textarea:required:valid {
 }
 
 .carousel-item-news:hover .car-text-wrap p {
-    color: #ff7e00
+    color: #007691
 }
 
 .news-animated2 {
@@ -4693,7 +4693,7 @@ body textarea:required:valid {
 }
 
 .block-Club-Gallery .filters-by-category .btn.btn-link-g:hover {
-    border: 2px solid #ff7e00
+    border: 2px solid #007691
 }
 
 .block-Club-Gallery .filters-by-category .btn.btn-link-g:active {
@@ -4710,7 +4710,7 @@ body textarea:required:valid {
 }
 
 .block-Club-Gallery .filters-by-category .btn.btn-link-g.selected {
-    border: 2px solid #ff7e00;
+    border: 2px solid #007691;
     background-color: #fff
 }
 
@@ -4920,7 +4920,7 @@ body textarea:required:valid {
 }
 
 .block-Partners .carousel-wrap-partners .owl-nav.disabled>div:hover {
-    color: #ff7e00
+    color: #007691
 }
 
 .block-Partners .carousel-wrap-partners .owl-nav.disabled>div.owl-next {
@@ -4950,7 +4950,7 @@ body textarea:required:valid {
 }
 
 .block-Partners .block-wrap-sponsor a:hover {
-    color: #ff7e00;
+    color: #007691;
     background-color: rgba(0, 0, 0, .1)
 }
 
@@ -5001,7 +5001,7 @@ body textarea:required:valid {
     border: 2px solid #fff;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    color: #ff7e00;
+    color: #007691;
     padding-left: 20px;
     -webkit-transition: all .5 ease;
     transition: all .5 ease
@@ -5039,7 +5039,7 @@ body textarea:required:valid {
 
 .block-Subscribe .bg-subscribe1 .form-wrap .form-control:focus {
     background-color: #fff;
-    border: 2px solid #ff7e00;
+    border: 2px solid #007691;
     padding-left: 20px
 }
 
@@ -5100,7 +5100,7 @@ body textarea:required:valid {
 
 .block-Subscribe .bg-subscribe2 .bg-dark2 .b-wrap-soc-network .icon-wrap a i {
     font-size: 36px;
-    color: #ff7e00;
+    color: #007691;
     -webkit-transition: all .5s ease;
     transition: all .5s ease
 }
@@ -5110,7 +5110,7 @@ body textarea:required:valid {
     font-size: 1.125em;
     letter-spacing: .3px;
     margin: 18px 0 25px 0;
-    color: #ff7e00;
+    color: #007691;
     -webkit-transition: all .5s ease;
     transition: all .5s ease
 }
@@ -5168,7 +5168,7 @@ body textarea:required:valid {
 }
 
 .block-Subscribe .bg-subscribe2 .bg-dark2 .b-wrap-soc-network .content-wrap .bbc .content-text-wrap:hover h6 {
-    color: #ff7e00
+    color: #007691
 }
 
 .block-Subscribe .bg-subscribe2 .bg-dark2 .b-wrap-soc-network .content-wrap .bbc .content-text-wrap h6 {
@@ -5207,7 +5207,7 @@ body textarea:required:valid {
     z-index: 1;
     left: 0;
     top: 0;
-    background-color: #ff7e00;
+    background-color: #007691;
     height: 100%;
     width: 100%;
     opacity: 0;
@@ -5258,7 +5258,7 @@ footer .map-wrap #map:hover i {
 }
 
 footer .map-wrap #map i {
-    color: #ff7e00;
+    color: #007691;
     font-size: 50px;
     position: absolute;
     left: 40%;
@@ -5326,7 +5326,7 @@ footer .content-wrap-footer .content-footer .b-contacts-wrap .b-inner1 a {
 footer .content-wrap-footer .content-footer .b-contacts-wrap .b-inner1 a :focus .b-contacts-wrap .b-inner1>a,
 footer .content-wrap-footer .content-footer .b-contacts-wrap .b-inner1 a:hover .b-contacts-wrap .b-inner1>a {
     text-decoration: none;
-    color: #ff7e00
+    color: #007691
 }
 
 footer .content-wrap-footer .content-footer .b-contacts-wrap .b-inner2 {
@@ -5351,7 +5351,7 @@ footer .content-wrap-footer .content-footer .copyright p {
 
 .email-link:hover {
     text-decoration: none;
-    color: #ff7e00
+    color: #007691
 }
 
 .about-content-block .car-item-bg1 {
@@ -5479,7 +5479,7 @@ footer .content-wrap-footer .content-footer .copyright p {
 }
 
 .about-content-block .owl-nav>div:hover {
-    color: #ff7e00
+    color: #007691
 }
 
 .about-content-block .owl-nav>div.owl-next {
@@ -5564,7 +5564,7 @@ footer .content-wrap-footer .content-footer .copyright p {
 }
 
 .about-content-block .carousel-item-about-sections:hover a h3 {
-    color: #ff7e00
+    color: #007691
 }
 
 .about-content-block .carousel-item-about-sections:hover a h3 span {
@@ -5607,7 +5607,7 @@ footer .content-wrap-footer .content-footer .copyright p {
 }
 
 .about-info-block .history-block .btn.on {
-    border: 2px solid #ff7e00;
+    border: 2px solid #007691;
     background-color: #fff
 }
 
@@ -5663,7 +5663,7 @@ body.Pages .block-Coaches {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
     font-size: 100px;
-    color: #ff7e00
+    color: #007691
 }
 
 .statistic-block .statistic-wrap-content h3 {
@@ -5695,7 +5695,7 @@ body.Pages .block-Coaches {
 }
 
 .statistic-block .statistic-wrap-content:hover h3 {
-    color: #ff7e00;
+    color: #007691;
     margin-top: 15px
 }
 
@@ -5763,12 +5763,12 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 }
 
 .schedule-block .links-wrap ul li .btn-link-g.on {
-    border: 2px solid #ff7e00;
+    border: 2px solid #007691;
     background-color: #fff
 }
 
 .schedule-block .links-wrap ul li .btn-link-g:hover {
-    border: 2px solid #ff7e00
+    border: 2px solid #007691
 }
 
 .schedule-block table {
@@ -5821,7 +5821,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 .schedule-block .btn-view {
     margin-top: 60px;
     background-color: #fff;
-    border: 2px solid #ff7e00
+    border: 2px solid #007691
 }
 
 .schedule-block .btn-view>span {
@@ -5832,7 +5832,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 }
 
 .schedule-block .btn-view:hover {
-    background-color: #ff7e00
+    background-color: #007691
 }
 
 .schedule-block .btn-view:hover>span {
@@ -5929,7 +5929,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 }
 
 .partners-page-block .sponsors-block .block-wrap-sponsor a:hover {
-    color: #ff7e00;
+    color: #007691;
     background-color: rgba(0, 0, 0, .1)
 }
 
@@ -6008,7 +6008,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 }
 
 .page-contacts-block .contact-info-wrap a {
-    color: #ff7e00;
+    color: #007691;
     font-family: KanitRegular, sans-serif !important;
     text-decoration: underline
 }
@@ -6047,7 +6047,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 
 .page-contacts-block .contact-info-wrap .icon-wrap .circle-border {
     display: inline-block;
-    border: 2px solid #ff7e00;
+    border: 2px solid #007691;
     -webkit-border-radius: 100px;
     border-radius: 100px;
     height: 54px;
@@ -6129,10 +6129,10 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 }
 
 .boxed-form .form-group .form-control:focus {
-    border: 1px solid #ff7e00;
+    border: 1px solid #007691;
     outline: 0;
-    -webkit-box-shadow: 0 0 8px 0 rgba(255, 126, 0, .56);
-    box-shadow: 0 0 8px 0 rgba(255, 126, 0, .56)
+    -webkit-box-shadow: 0 0 8px 0 rgba(0, 117, 250, 0.493);
+    box-shadow: 0 0 8px 0 rgba(0, 117, 250, 0.493)
 }
 
 .boxed-form .form-group textarea.form-control {
@@ -6162,7 +6162,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 
 .boxed-form .btn:hover {
     color: #fff;
-    background-color: #ff7e00
+    background-color: #007691
 }
 
 .block-posts .text-wrap h2 {
@@ -6218,7 +6218,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 }
 
 .block-posts .blog-post .post-image .post-img-carousel-wrap .owl-nav.disabled>div:hover {
-    color: #ff7e00
+    color: #007691
 }
 
 .block-posts .blog-post .post-image .post-img-carousel-wrap .owl-nav.disabled>div.owl-next {
@@ -6285,7 +6285,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 }
 
 .block-posts .blog-post .post-meta .post-message i {
-    color: #ff7e00;
+    color: #007691;
     position: relative;
     top: 5px;
     left: -4px
@@ -6302,7 +6302,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 }
 
 .block-posts .blog-post .post-title a:hover {
-    color: #ff7e00
+    color: #007691
 }
 
 .block-posts .blog-post .post-teaser p {
@@ -6323,7 +6323,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
     position: absolute;
     top: 0;
     left: 20px;
-    color: #ff7e00
+    color: #007691
 }
 
 .block-posts .blog-post .btn {
@@ -6403,7 +6403,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 
 .block-posts .side-block .calendar table tr td:hover {
     background-color: #eee;
-    color: #ff7e00
+    color: #007691
 }
 
 .block-posts .category-list {
@@ -6434,11 +6434,11 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
     display: block;
     font-family: Football;
     font-size: 15px;
-    color: #ff7e00
+    color: #007691
 }
 
 .block-posts .category-list li a:hover {
-    color: #ff7e00
+    color: #007691
 }
 
 .block-posts .tags-list {
@@ -6470,7 +6470,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 
 .block-posts .tags-list li a:hover {
     color: #fff;
-    background-color: #ff7e00
+    background-color: #007691
 }
 
 .side-block.pad-minus {
@@ -6535,7 +6535,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
 }
 
 .btns-page-posts-wrap .btn.active {
-    background-color: #ff7e00
+    background-color: #007691
 }
 
 .btns-page-posts-wrap .btn.active>span {
@@ -6579,7 +6579,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
     position: absolute;
     top: 0;
     left: 0;
-    color: #ff7e00
+    color: #007691
 }
 
 .comments-block .comment .text .meta {
@@ -6625,10 +6625,10 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         width: 175px
     }
     .block-Teams .b-hover-team:hover .oblique-block i {
-        color: #ff7e00
+        color: #007691
     }
     .block-Teams .b-hover-team:hover h3 {
-        color: #ff7e00
+        color: #007691
     }
     .block-Teams .teams-content .b-inner-text {
         display: block;
@@ -6776,7 +6776,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .b-wrap-Coaches .carousel-wrap-coaches .owl-nav.disabled>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .b-wrap-Coaches .carousel-wrap-coaches .owl-nav.disabled>div.owl-next {
         right: -57px;
@@ -6792,7 +6792,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .block-News .carousel-wrap-news .owl-nav.disabled>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .block-News .carousel-wrap-news .owl-nav.disabled>div.owl-next {
         right: -57px;
@@ -6821,7 +6821,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .block-Partners .carousel-wrap-partners .owl-nav.disabled>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .block-Partners .carousel-wrap-partners .owl-nav.disabled>div.owl-next {
         right: -57px;
@@ -6932,7 +6932,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .b-wrap-Coaches .carousel-wrap-coaches .owl-nav.disabled>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .b-wrap-Coaches .carousel-wrap-coaches .owl-nav.disabled>div.owl-next {
         right: -37px;
@@ -6957,7 +6957,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .block-News .carousel-wrap-news .owl-nav.disabled>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .block-News .carousel-wrap-news .owl-nav.disabled>div.owl-next {
         right: -37px;
@@ -6983,7 +6983,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .block-Partners .carousel-wrap-partners .owl-nav.disabled>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .block-Partners .carousel-wrap-partners .owl-nav.disabled>div.owl-next {
         right: -37px;
@@ -7058,7 +7058,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         margin: 4px
     }
     .sponsors-block .carousel-wrap-sponsors .owl-dots .owl-dot.active {
-        background-color: #ff7e00
+        background-color: #007691
     }
     .block-posts .side-block .calendar table tr td {
         padding: 5px 0
@@ -7123,7 +7123,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .block-News .carousel-wrap-news .owl-nav.disabled>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .block-News .carousel-wrap-news .owl-nav.disabled>div.owl-next {
         right: -20px;
@@ -7172,7 +7172,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         margin: 4px
     }
     body.Pages .carousel-wrap-about-sections .owl-dots .owl-dot.active {
-        background-color: #ff7e00
+        background-color: #007691
     }
 }
 
@@ -7441,7 +7441,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .block-News .carousel-wrap-news .owl-nav.disabled>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .block-News .carousel-wrap-news .owl-nav.disabled>div.owl-next {
         right: 20px;
@@ -7970,7 +7970,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         margin: 4px
     }
     .b-wrap-Coaches .carousel-wrap-coaches .owl-dots .owl-dot.active {
-        background-color: #ff7e00
+        background-color: #007691
     }
     .b-wrap-Coaches .carousel-wrap-coaches .carousel-wrap-news .owl-nav.disabled {
         display: none
@@ -8006,7 +8006,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         margin: 4px
     }
     .block-News .carousel-wrap-news .owl-dots .owl-dot.active {
-        background-color: #ff7e00
+        background-color: #007691
     }
     .block-News .carousel-wrap-news .carousel-item-news {
         margin: 0 60px !important
@@ -8093,7 +8093,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .block-Partners .carousel-wrap-partners .owl-nav.disabled>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .block-Partners .carousel-wrap-partners .owl-nav.disabled>div.owl-next {
         right: -10px;
@@ -8113,7 +8113,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         margin: 4px
     }
     .block-Partners .carousel-wrap-partners .owl-dots .owl-dot.active {
-        background-color: #ff7e00
+        background-color: #007691
     }
     .block-Partners .carousel-wrap-partners .carousel-item-partners a .min-img2 {
         width: 40%
@@ -8333,7 +8333,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         position: absolute;
         top: 0;
         left: 20px;
-        color: #ff7e00
+        color: #007691
     }
     .block-posts .blog-post .btn {
         margin: 35px auto 0 auto;
@@ -8404,7 +8404,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .carousel-eq .owl-nav>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .carousel-eq .owl-nav>div.owl-next {
         right: 25px;
@@ -8423,7 +8423,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .carousel-eq .owl-nav>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .carousel-eq .owl-nav>div.owl-next {
         right: 25px;
@@ -8442,7 +8442,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .carousel-eq .owl-nav>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .carousel-eq .owl-nav>div.owl-next {
         right: 20px;
@@ -8461,7 +8461,7 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         transition: all .5s ease
     }
     .carousel-eq .owl-nav>div:hover {
-        color: #ff7e00
+        color: #007691
     }
     .carousel-eq .owl-nav>div.owl-next {
         right: 20px;
