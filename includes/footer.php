@@ -32,13 +32,13 @@
 
 											<div class="b-inner2">
 												<p>Call us:</p>
-												<p class="number">561-951-6848</p>
+												<p class="number">1-561-951-6848</p>
 											</div>
 
 										</div>
 
 										<div class="copyright">
-											<p>© 2017 | Privacy Policy</p>
+											<p>© 2018 | Made by <a target="_blank" href="https://blazeweb.herokuapp.com">BlazeWeb</a></p>
 										</div>
 
 									</div>	<!-- End content-footer -->

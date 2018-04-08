@@ -4007,7 +4007,7 @@ body textarea:required:valid {
 }
 
 .Pages .infoCommittee-wrap {
-    margin-top: 122px
+    /* margin-top: 122px */
 }
 
 .Pages .infoCommittee-wrap .inner-text {
@@ -5593,7 +5593,7 @@ footer .content-wrap-footer .content-footer .copyright p {
 }
 
 .about-info-block .history-block {
-    margin-top: 110px;
+    margin-top:20px;
     height: 500px
 }
 

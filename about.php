@@ -11,9 +11,7 @@
 
 
 	<div class="wrapper">
-
-				<?php include "includes/header.php"?>
-
+		<?php include "includes/header.php"?>
 		<!-- Start Page-Content -->
 		<section id="page-content" >
 
@@ -40,69 +38,7 @@
 			</div> <!-- End Welcom Block -->
 
 			<!-- Start About-Content-Block -->	
-			<div class="about-content-block t-center">
-				<div class="container-fluid padding-null">
-
-					<div class="carousel-wrap-about-players owl-carousel owl-theme">
-
-						<div class="carousel-item-about-players car-item-bg1">
-							<div class="car-content">
-								<h4>The Greats</h4> 
-								<h2><span class="orange-text">Adam Smith</span></h2>
-								<p>He was drafted by the Atlanta Falcons in the 1991 NFL Draft. He was with them for only one season before being traded off to the Green Bay Packers in 1992.</p>
-								<a href="#" class="btn btn-link-o">
-									<span>read more</span>
-								</a>
-							</div>
-						</div> <!-- End Carousel-item-about-players-->
-
-						<div class="carousel-item-about-players car-item-bg2">
-							<div class="car-content">
-								<h4>The Greats</h4> 
-								<h2><span class="orange-text">Max Grog</span></h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium magnam non delectus nulla quos tempora iure inventore sed itaque saepe!</p>
-								<a href="#" class="btn btn-link-o">
-									<span>read more</span>
-								</a>
-							</div>
-						</div> <!-- End Carousel-item-about-players-->
-
-						<div class="carousel-item-about-players car-item-bg3">
-							<div class="car-content">
-								<h4>The Greats</h4> 
-								<h2><span class="orange-text">Antony Simons</span></h2>
-								<p>Praesentium magnam non delectus nulla quos tempora iure inventore sed itaque saepe! He was with them for only  to the Green Bay Packers in 1992.</p>
-								<a href="#" class="btn btn-link-o">
-									<span>read more</span>
-								</a>
-							</div>
-						</div> <!-- End Carousel-item-about-players-->
-					</div> <!-- End carousel-wrap-about-players -->
-
-					<div class="carousel-wrap-about-sections owl-carousel owl-theme">
-						<div class="carousel-item-about-sections section1">
-							<a href="#">
-								<h3><span class="orange-text">The</span><br>Club House</h3>
-							</a>
-						</div> <!-- End Carousel-item-about-sections-->
-
-						<div class="carousel-item-about-sections section2">
-							<a href="#">
-								<h3><span class="orange-text">The</span><br>Championship</h3>
-							</a>
-						</div> <!-- End Carousel-item-about-sections-->
-
-						<div class="carousel-item-about-sections section3">
-							<a href="#">
-								<h3><span class="orange-text">The</span><br>Facilities</h3>
-							</a>
-						</div> <!-- End Carousel-item-about-sections-->
-					</div><!-- End carousel-wrap-about-sections -->
-
-				</div> <!-- End container-fluid -->
-
-			</div> <!-- End About-Content-Block-->
-
+			
 			<!-- About-info-block -->
 			<div class="about-info-block" id="about-history">
 				<div class="container">

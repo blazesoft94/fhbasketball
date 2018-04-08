@@ -532,7 +532,7 @@
 						<div class="container-fluid">
 							<div class="row">
 
-								<div class="col-md-12 padding-null">
+								<!-- <div class="col-md-12 padding-null">
 									<div class="bg-subscribe1">
 										<div class="bg-dark1">
 
@@ -550,7 +550,7 @@
 
 										</div>
 									</div>	
-								</div><!-- End col-md-12 -->
+								</div> -->
 
 								<div class="col-md-12 padding-null">
 									<div class="bg-subscribe2">
