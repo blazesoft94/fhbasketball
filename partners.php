@@ -1,33 +1,5 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-
-<head>
-
-	<meta charset="utf-8">
-
-	<title>American Football Club Partners</title>
-	<meta name="description" content="">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<meta property="og:image" content="path/to/image.jpg">
-
-	<link rel="shortcut icon" href="img/favicon/fav.png" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/fav.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/fav.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/fav.png">
-
-	<!-- Bootstrap v3.3.4 Grid Styles -->
-	<link rel="stylesheet" href="css/bootstrapGrid.min.css">
-	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
-	<link rel="stylesheet" href="css/header.min.css">
-	<!-- Fonts -->
-	<link rel="stylesheet" href="css/fonts.min.css">
-	<!-- Load CSS Start -->
-	<link rel="stylesheet" href="css/main.min.css">
-	
-</head>
+<?php $current_page = "Partners" ?>
+<?php include "includes/head.php"?>
 
 <body class="Pages">
 	<!-- preloader -->
@@ -39,89 +11,7 @@
 
 
 	<div class="wrapper">
-
-		<header class="main-head clearfix">
-			<div class="container">
-				<div class="bgc-header"></div>
-				<div class="header-top">
-					<div class="row">
-
-						<div class="mini-menu hidden-lg hidden-md">
-							<a href="#" class="toggle-mnu"><span></span></a>
-						</div> <!-- End Mini-menu -->
-
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<a href="index.html" class="logo"><img src="img/Logo.png" alt=""></a>
-						</div>
-
-						<div class="col-lg-3 col-md-4 hidden-sm hidden-xs">
-							<h1>Join our club</h1>
-						</div>
-
-						<div class="col-lg-5 col-md-4 hidden-sm hidden-xs">
-							<div class="row">
-								<div class="col-lg-6 hidden-md hidden-sm hidden-xs">
-									<p>We are always welcoming of new members</p>
-								</div>
-								<div class="col-lg-6">
-									<div class="icon-wrap">
-
-										<a href="https://www.facebook.com/" target="_blank">
-											<div class="circle-border">
-												<i class="icon-facebook"></i>
-											</div>
-										</a>
-
-										<a href="https://twitter.com/" target="_blank">
-											<div class="circle-border">
-												<i class="icon-twitter-logo-silhouette"></i>
-											</div>
-										</a>
-
-										<a href="https://www.instagram.com/" target="_blank">
-											<div class="circle-border">
-												<i class="icon-instagram-symbol"></i>
-											</div>
-										</a>
-
-									</div> <!-- End Icon-wrap -->
-								</div>
-							</div>
-
-						</div>
-
-					</div> <!-- End Row -->
-				</div> <!-- End Header-top -->
-
-				<!-- Start navigation -->
-				<nav id="menu" class="nav-line hidden-sm hidden-xs nav-dark">
-					<ul class="menu">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">about</a></li>
-						<li><a href="teams-stats.html">Teams and stats</a></li>
-						<li><a href="gallery.html">Photo/Video</a></li>
-						<li><a href="blog-posts.html">News/Blog</a></li>
-						<li><a href="schedule.html">SCHEDULE</a></li>
-						<li class="active"><a href="partners.html">PARTNERS</a></li>
-						<li><a href="contacts.html">Contacts</a></li>
-					</ul>
-				</nav> <!-- End Nav -->
-
-				<nav class="nav-line-hidden hidden-lg hidden-md ">
-					<ul class="menu">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">about</a></li>
-						<li><a href="teams-stats.html">Teams and stats</a></li>
-						<li><a href="gallery.html">Photo/Video</a></li>
-						<li><a href="blog-posts.html">News/Blog</a></li>
-						<li><a href="schedule.html">SCHEDULE</a></li>
-						<li class="active"><a href="partners.html">PARTNERS</a></li>
-						<li><a href="contacts.html">Contacts</a></li>
-					</ul>
-				</nav> <!-- End Nav -->
-
-			</div> <!-- End Container -->
-		</header> <!-- End Header -->
+		<?php include "includes/header.php"?>
 
 		<!-- Start Page-Content -->
 		<section id="page-content" >

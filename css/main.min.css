@@ -1,3 +1,10 @@
+.blue-anchor{
+    color: #007691;
+}
+.blue-anchor:visited{
+    color: #007691;
+}
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -4203,7 +4210,8 @@ body textarea:required:valid {
 .block-Teams .teams-content .b-inner-text {
     display: block;
     float: left;
-    margin-left: 35px
+    margin-left: 35px;
+    text-shadow: 2px 2px 4px rgba(0,35,43,0.65);
 }
 
 .block-Teams .teams-content .b-inner-text h3 {
@@ -4402,7 +4410,8 @@ body textarea:required:valid {
 }
 
 .b-wrap-Coaches {
-    background-image: url(../img/coaches/bg-img-coaches.jpg);
+    background-color: #272829;
+    background-image: url(../img/coaches/Lebron_main2.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: block;
@@ -4725,11 +4734,15 @@ body textarea:required:valid {
 .block-Club-Gallery .gallery__item .gallery__item__img {
     background-color: #303030;
     -webkit-transition: all .5s ease;
-    transition: all .5s ease
+    transition: all .5s ease;
 }
 
 .block-Club-Gallery .gallery__item .gallery__item__img img {
-    width: 100%;
+    width:100%;
+
+    object-fit: cover;
+    height: 500px;
+    /* clip:rect(0px,60px,200px,0px); */
     opacity: .5;
     -webkit-transition: all .5s ease;
     transition: all .5s ease
@@ -5295,8 +5308,8 @@ footer .content-wrap-footer .content-footer {
 
 footer .content-wrap-footer .content-footer .logo-footer a {
     display: block;
-    width: 333px;
-    padding-top: 55px
+    width: 110px;
+    padding-top: 20px
 }
 
 footer .content-wrap-footer .content-footer .b-contacts-wrap {
@@ -8202,11 +8215,11 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         width: 200px !important
     }
     .logo-footer a {
-        width: 220px !important
+        width: 90px !important
     }
     .logo-footer img {
         margin: 0 auto;
-        width: 200px !important
+        width: 100% !important
     }
     .about-content-block .carousel-item-about-players {
         height: 400px
