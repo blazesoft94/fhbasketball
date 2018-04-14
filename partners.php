@@ -19,7 +19,7 @@
 			<!-- Start Breadcrumbs -->
 			<div class="breadcrumbs">
 				<ul class="breadcrumb t-center">
-					<li><a href="index.html">home</a></li>
+					<li><a href="index.php">home</a></li>
 					<li class="active">partners</li>
 				</ul>
 			</div> <!-- End Breadcrumbs -->

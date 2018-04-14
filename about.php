@@ -18,7 +18,7 @@
 			<!-- Start Breadcrumbs -->
 			<div class="breadcrumbs">
 				<ul class="breadcrumb t-center">
-					<li><a href="index.html">home</a></li>
+					<li><a href="index.php">home</a></li>
 					<li class="active">about</li>
 				</ul>
 			</div> <!-- End Breadcrumbs -->
@@ -43,7 +43,6 @@
 			<div class="about-info-block" id="about-history">
 				<div class="container">
 					<div class="row">
-
 						<div class="col-lg-6">
 							<div class="history-block">
 
@@ -61,7 +60,7 @@
 
 								<a href="#" class="btn btn-link-g spoiler-l3"><span>Teams</span></a>
 								<div id="info-spol3" class="info-spoiler3">
-									<p>Currently we have one 15U team and we are adding more teams in the future. If you are interested in playing or coaching for the Florida Hornets, please visit our <a class="blue-anchor orange-text" href="contacts.html">contact page.</a></p>
+									<p>Currently we have one 15U team and we are adding more teams in the future. If you are interested in playing or coaching for the Florida Hornets, please visit our <a class="blue-anchor orange-text" href="contacts.php">contact page.</a></p>
 								</div>	
 							</div>
 						</div>

@@ -19,7 +19,7 @@
 			<!-- Start Breadcrumbs -->
 			<div class="breadcrumbs">
 				<ul class="breadcrumb t-center">
-					<li><a href="index.html">home</a></li>
+					<li><a href="index.php">home</a></li>
 					<li class="active">teats and stats</li>
 				</ul>
 			</div> <!-- End Breadcrumbs -->
@@ -222,40 +222,44 @@
 									<div class="carousel-item-coaches coaches-animated1">
 
 										<div class="car-img-wrap">
-											<img src="img/coaches/coaches1.png" alt="icon-coaches">
+											<img src="img/coaches/coach1.jpg" alt="icon-coaches">
 										</div>
 
 										<div class="car-text-wrap">
-											<h4>Sammy McDonnell</h4>
-											<h5 class="orange-text">Coach & Offensive Coordinator</h5>
-											<p>The 2017 season will be Sammy' first season with us. He has been coaching for over 20 years.</p>
+											<h4>Kylan Clark</h4>
+											<h5 class="orange-text">Head Coach</h5>
+											<p id="style-1"> I was born in Portsmouth, Virginia. My family moved from Virginia, Delaware and Illinois. I grew up in the Chicagoland area, an area where poverty and strife are common. Most of us who grew up there knew only one way out of the hood which was sports. In high school I excelled in multiple sports; basketball and soccer being my two favorites. I was blessed with the ability to play both sports on the collegiate level. After a recasting string of injuries I had to reevaluate the drawing board. <br><br>
+I have always been a student of the game and I have always had a knack for teaching the game as well. I started to look into coaching the game and upon moving to Florida a few years ago, I started off assistant coaching at the local recreational facility for youth and eventually started coaching at Palm Beach Gardens High School as freshman assistant coach, then to JV as the head coach. <br><br>
+Being a basketball player that has experienced the next level, I know and understand the dedication and work required as a student and an athlete to be successful. In the Florida Hornets program we require no less than a 2.5 GPA, excellent behavior in classes and high standards of practice and gameplay. I believe that upholding this standard of efficacy promotes the ability for youth to learn about the other options available to them as talented young men. Our future is not determined by our athletic ability, but the structure and camaraderie of team sports can help mold the future of your choice!</p>
 											</div>
 
-											<div class="car-btn-wrap">
+											<!-- <div class="car-btn-wrap">
 												<a href="#" class="btn btn-link-o">
 													<span>know more</span>
 												</a>
-											</div>
+											</div> -->
 
 										</div> <!--End carousel-item-coaches -->
 
 										<div class="carousel-item-coaches coaches-animated2">
 
 											<div class="car-img-wrap">
-												<img src="img/coaches/coaches2.png" alt="icon-coaches">
+												<img src="img/coaches/coach2.jpg" alt="icon-coaches">
 											</div>
 
 											<div class="car-text-wrap">
-												<h4>James Frazier</h4>
-												<h5 class="orange-text">Defensive Coordinator</h5>
-												<p>James has been with us for a number of years, but this season sees his return to kitted coaching.</p>
+												<h4> Vinny Watkins</h4>
+												<h5 class="orange-text">Assistant Coach</h5>
+												<p id="style-1">I was born in Toledo, Ohio. I had a wonderful childhood full of great family and friends. My family holds very strong Christian values-to always honor God and grow his kingdom. Since I was 3 yrs old, I have always been on a basketball court helping my father coach; watching and learning everything I could from all types of players. I was a coaches son almost my whole life. Ive won championships in almost every year from fourth grade through a senior year. In high school I was an honor roll student and an all-state athlete. <br><br>
+												I have coached all ages, both female and male teams. Basketball is close to my heart and has been a family sport. My father, mother, and sister were college basketball players. I’ve found so much joy in coaching and watching young men and women executing fundamentals and seeing those individuals grow up and become successful individuals in life and athletics. <br><br>
+												Today I am a blessed man with a beautiful wife (Kate) and two beautiful children (Maddie, Dean) I truly have everything I have dreamed of. My success and stability in my life is the result of my walk with Christ. I’ve had many successes and failures both in athletics and definitely in life but the core of my purpose is to help others achieve greatness in life and glorify God’s kingdom.</p>
 											</div>
 
-											<div class="car-btn-wrap">
+											<!-- <div class="car-btn-wrap">
 												<a href="#" class="btn btn-link-o">
 													<span>know more</span>
 												</a>
-											</div>
+											</div> -->
 
 										</div> <!--End carousel-item-coaches -->
 

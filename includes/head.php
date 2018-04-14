@@ -1,3 +1,4 @@
+<?php include_once "includes/connect_db.php"?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 

@@ -1,7 +1,7 @@
 <?php $current_page = "Gallery" ?>
 <?php include "includes/head.php"?>
 
-<body class="Pages">
+<body class="Pages gallery-W">
 	<!-- preloader -->
 	<div class="pl">
 		<div class="round1 anti"></div>
@@ -19,7 +19,7 @@
 			<!-- Start Breadcrumbs -->
 			<div class="breadcrumbs">
 				<ul class="breadcrumb t-center">
-					<li><a href="index.html">home</a></li>
+					<li><a href="index.php">home</a></li>
 					<li class="active">Photo&video</li>
 				</ul>
 			</div> <!-- End Breadcrumbs -->
@@ -41,10 +41,10 @@
 								<div class="filters-by-category">
 									<ul class="option-set" data-option-key="filter">
 										<li><a class="btn btn-link-g selected" href="#filter" data-option-value="*"><span>All Photos</span></a></li>
-										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category1"><span>2014 Gallery</span></a></li>
-										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category2"><span>2015 Gallery</span></a></li>
-										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category3"><span>2016 Gallery</span></a></li>
-										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category4"><span>2017 Gallery</span></a></li>
+										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category1"><span>Game</span></a></li>
+										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category2"><span>Players</span></a></li>
+										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category3"><span>Faculty &amp; Staff</span></a></li>
+										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category4"><span>Others</span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -52,107 +52,34 @@
 							<div class="col-md-12 gallery-m">
 								<div id="gallery" class="gallery gallery-isotope clearfix">
 
-									<div class="gallery__item category1">
-										<div class="gallery__item__img">
-											<img src="img/clubGallery/clubGallery1.jpg" alt="gc">
-											<a class="hover-link-g mfp-gallery" href="img/clubGallery/clubGallery1.jpg">
-												<div class="inside">
-													<i class="icon-cross"></i>
-													<p>We have a senior mens club entered into in the Senior competition of the competition.</p>
-												</div>	
-											</a>
+									
+								<?php 
+									$sql = "select * from gallery order by gallery_id__blazeweb desc limit 6";
+									$result = $con->query($sql);
+									$c = 0;
+									if($result->num_rows>0){
+										while($row=$result->fetch_assoc()){
+											if($c>=6){break;}
+											$c++;
+											$image_name = $row["gallery_image__blazeweb"];
+											$image_text = $row["gallery_text__blazeweb"];
+								?>
+										<div class="gallery__item category1">
+											<div class="gallery__item__img">
+												<div class="gallery-img-holder"><img src="img/clubGallery/<?php echo $image_name?>" alt="gc"></div>
+												
+												<a class="hover-link-g mfp-gallery" href="img/clubGallery/<?php echo $image_name?>">
+													<div class="inside">
+														<i class="icon-cross"></i>
+														<p><?php echo $image_text?></p>
+													</div>	
+												</a>
+											</div>
 										</div>
-									</div>
-									<div class="gallery__item category2">
-										<div class="gallery__item__img">
-											<img src="img/clubGallery/clubGallery2.jpg" alt="gc">
-											<a class="hover-link-g mfp-gallery" href="img/clubGallery/clubGallery2.jpg">
-												<div class="inside">
-													<i class="icon-cross"></i>
-													<p>We have a senior mens club entered into in the Senior competition of the competition.</p>
-												</div>	
-											</a>
-										</div>
-									</div>
-									<div class="gallery__item category1">
-										<div class="gallery__item__img">
-											<img src="img/clubGallery/clubGallery3.jpg" alt="gc">
-											<a class="hover-link-g mfp-gallery" href="img/clubGallery/clubGallery3.jpg">
-												<div class="inside">
-													<i class="icon-cross"></i>
-													<p>We have a senior mens club entered into in the Senior competition of the competition.</p>
-												</div>	
-											</a>
-										</div>
-									</div>
-									<div class="gallery__item category3">
-										<div class="gallery__item__img">
-											<img src="img/clubGallery/clubGallery4.jpg" alt="gc">
-											<a class="hover-link-g mfp-gallery" href="img/clubGallery/clubGallery4.jpg">
-												<div class="inside">
-													<i class="icon-cross"></i>
-													<p>We have a senior mens club entered into in the Senior competition of the competition.</p>
-												</div>	
-											</a>
-										</div>
-									</div>
-									<div class="gallery__item category1">
-										<div class="gallery__item__img">
-											<img src="img/clubGallery/clubGallery5.jpg" alt="gc">
-											<a class="hover-link-g mfp-gallery" href="img/clubGallery/clubGallery5.jpg">
-												<div class="inside">
-													<i class="icon-cross"></i>
-													<p>We have a senior mens club entered into in the Senior competition of the competition.</p>
-												</div>	
-											</a>
-										</div>
-									</div>
-									<div class="gallery__item category4">
-										<div class="gallery__item__img">
-											<img src="img/clubGallery/clubGallery6.jpg" alt="gc">
-											<a class="hover-link-g mfp-gallery" href="img/clubGallery/clubGallery6.jpg">
-												<div class="inside">
-													<i class="icon-cross"></i>
-													<p>We have a senior mens club entered into in the Senior competition of the competition.</p>
-												</div>	
-											</a>
-										</div>
-									</div>
-									<div class="gallery__item category2">
-										<div class="gallery__item__img">
-											<img src="img/clubGallery/clubGallery7.jpg" alt="gc">
-											<a class="hover-link-g mfp-gallery" href="img/clubGallery/clubGallery7.jpg">
-												<div class="inside">
-													<i class="icon-cross"></i>
-													<p>We have a senior mens club entered into in the Senior competition of the competition.</p>
-												</div>	
-											</a>
-										</div>
-									</div>
-									<div class="gallery__item category3">
-										<div class="gallery__item__img">
-											<img src="img/clubGallery/clubGallery8.jpg" alt="gc">
-											<a class="hover-link-g mfp-gallery" href="img/clubGallery/clubGallery8.jpg">
-												<div class="inside">
-													<i class="icon-cross"></i>
-													<p>We have a senior mens club entered into in the Senior competition of the competition.</p>
-												</div>	
-											</a>
-										</div>
-									</div>
-									<div class="gallery__item category1">
-										<div class="gallery__item__img">
-											<img src="img/clubGallery/clubGallery9.jpg" alt="gc">
-											<a class="hover-link-g mfp-gallery" href="img/clubGallery/clubGallery9.jpg">
-												<div class="inside">
-													<i class="icon-cross"></i>
-													<p>We have a senior mens club entered into in the Senior competition of the competition.</p>
-												</div>	
-											</a>
-										</div>
-									</div>
-
-
+								<?php
+									//closing the while loop	
+									}}
+								?>
 								</div> <!-- End gallery-isotope -->
 							</div> <!-- End block gallery-m -->
 

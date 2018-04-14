@@ -5,7 +5,7 @@
 
 							<div class="col-md-6 padding-null">
 								<div class="map-wrap">
-									<a target="_blank" href="https://www.google.com.ua/maps/@42.2651834,-83.74715,16z?hl=en">
+									<a target="_blank" href="https://www.google.com/maps/place/Palm+Beach+Gardens+Community+High+School/@26.825103,-80.1033247,17z/data=!3m1!4b1!4m5!3m4!1s0x88d92aab4434e381:0xb0ccc100c7f7d43f!8m2!3d26.825103!4d-80.101136">
 										<div id="map"> <i class="icon-map-marker-point"></i></div>
 									</a>
 								</div>
@@ -16,7 +16,7 @@
 									<div class="content-footer">
 
 										<div class="logo-footer">
-											<a href="index.html">
+											<a href="index.php">
 												<img class="responsive-img" src="img/Logo.png" alt="logo">
 											</a>
 										</div>
@@ -26,8 +26,8 @@
 											<div class="b-inner1">
 												<p class="orange-text">Florida Hornets</p>
 												<p>Plant Drive Park, 10106 </p>
-												<p>Palm Beach Hardens, FL 33410</p>
-												<a href="contacts.html" class="email-link">info@floridahornets.com</a>
+												<p>Palm Beach Gardens, FL 33410</p>
+												<a href="contacts.php" class="email-link">info@floridahornets.com</a>
 											</div>
 
 											<div class="b-inner2">

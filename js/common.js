@@ -51,18 +51,6 @@ $(".two-l").click(function() {
 	return false;
 });
 
-$(".thire-l").click(function() {
-	$(this).toggleClass("on");
-	$(".wrap-inner-s-3").slideToggle();
-	/*----------------------------------------------------------*/
-	$(".wrap-inner-s-1").slideUp();
-	$(".one-l").removeClass("on");
-	$(".wrap-inner-s-2").slideUp();
-	$(".two-l").removeClass("on");
-	/*----------------------------------------------------------*/
-	return false;
-});
-
 //Spoylar-About
 $(".spoiler-l1").click(function() {
 	$(this).toggleClass("on");
@@ -143,8 +131,8 @@ $(".tabel-link3").click(function() {
 		margin:0,
 		nav:true,
 		autoplay:true,
-		autoplayTimeout:5000,
-		smartSpeed:1200,
+		autoplayTimeout:8000,
+		smartSpeed:2200,
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn',
 		navText:["<i class='icon-left-arrow'></i>","<i class='icon-right-arrow'></i>"],
@@ -163,20 +151,21 @@ $(".tabel-link3").click(function() {
 
 	//Carousel-Coaches
 	$(".carousel-wrap-coaches").owlCarousel({
-		loop:true,
+		loop:false,
 		margin:0,
 		smartSpeed:1200,
-		navText:["<i class='icon-left-arrow'></i>","<i class='icon-right-arrow'></i>"],
+		navText:"",
+		// ["<i class='icon-left-arrow'></i>","<i class='icon-right-arrow'></i>"],
 		responsive:{
 			0:{
 				items:1,
 			},
-			864:{
-				items:2,
-			},
 			1200:{
-				items:3,
-			}
+				items:2,}
+			// },
+			// 1200:{
+			// 	items:3,
+			// }
 		}
 	});
 
