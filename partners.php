@@ -37,61 +37,33 @@
 						<div class="sponsors-block t-center clearfix">
 							<div class="col-md-12">
 								<div class="carousel-wrap-sponsors owl-carousel owl-theme">
+								<?php
+											$sql = "select * from sponsors where sponsor_level__blazeweb = '1'";
+											$result = $con->query($sql);
+											if($result->num_rows>0){
+												$c = 0;
+												while($row = $result->fetch_assoc()){
 
+										?>
 									<div class="carousel-item-sponsor">
 
 										<div class="car-img-wrap">
-											<img class="img-sponsor1" src="img/partners/sponsor2.png" alt="sponsor">
+											<img class="img-sponsor<?php echo $c?>" src="img/partners/<?php echo $row["sponsor_image__blazeweb"]."2".$row["sponsor_imagetype__blazeweb"] ?>" alt="sponsor">
 										</div>
 
 										<div class="car-text-wrap">
-											<p>Since its founding in 1995, Active Sport has become a leading supplier of quality corporate uniform & apparel, including t-shirts, shirts, windbreakers, jackets, workwear, caps and towels.Our is to deliver products and services. Active Sport is the core brand for the company and all products are selling under the brand. </p>
+											<p><?php echo $row["sponsor_text__blazeweb"] ?></p>
 										</div>
 
 										<div class="car-btn-wrap">
-											<a href="#" class="btn btn-link-w">
+											<a href="<?php echo $row["sponsor_url__blazeweb"]?>" class="btn btn-link-w">
 												<span>visit our sponsor</span>
 											</a>
 										</div>
 
-									</div> <!-- End carousel-item-sponsor -->
-
-									<div class="carousel-item-sponsor">
-
-										<div class="car-img-wrap">
-											<img class="img-sponsor2" src="img/partners/sponsor3.png" alt="sponsor">
-										</div>
-
-										<div class="car-text-wrap">
-											<p>All over the world people of all ages - male and female - enjoy sports, promoting healthy, fulfilling lifestyles. Our mission is to deliver products and services that enrich the experience of all sports-lovers. Our ability to fulfill this mission is founded on the technological expertise we apply in creating our products. </p>
-										</div>
-
-										<div class="car-btn-wrap">
-											<a href="#" class="btn btn-link-w">
-												<span>visit our sponsor</span>
-											</a>
-										</div>
-
-									</div> <!-- End carousel-item-sponsor -->
-
-									<div class="carousel-item-sponsor">
-
-										<div class="car-img-wrap">
-											<img class="img-sponsor3" src="img/partners/sponsor1.png" alt="sponsor">
-										</div>
-
-										<div class="car-text-wrap">
-											<p>Fast Body, Inc. operates sporting goods stores in small and mid-sized markets, predominantly in the South, Southwest, Mid-Atlantic and Midwest. We offer convenient locations and a broad assortment of quality branded athletic footwear, apparel and equipment with a high level of customer service. </p>
-										</div>
-
-										<div class="car-btn-wrap">
-											<a href="#" class="btn btn-link-w">
-												<span>visit our sponsor</span>
-											</a>
-										</div>
-
-									</div> <!-- End carousel-item-sponsor -->
-
+									</div>
+												<?php }}?>
+									<!-- End carousel-item-sponsor -->
 								</div> <!-- End carousel-wrap-sponsors -->
 							</div>
 							
@@ -113,69 +85,22 @@
 							</div>
 
 							<div class="all-partners-block-wrap">
+							<?php
+								$sql = "select * from sponsors";
+								$result = $con->query($sql);
+								if($result->num_rows>0){
+									$c = 0;
+									while($row = $result->fetch_assoc()){
+							?>		
 								<div class="col-md-4 col-sm-6">
-									<a href="#">
+									<a href="<?php echo $row["sponsor_url__blazeweb"]?>">
 										<div class="img-wrap-partner">
-											<img src="img/partners/partners1.png" alt="partner">
+											<img src="img/partners/<?php echo $row["sponsor_image__blazeweb"].$row["sponsor_imagetype__blazeweb"]?>" alt="partner">
 										</div>
 									</a>
 								</div>
-								<div class="col-md-4 col-sm-6">
-									<a href="#">
-										<div class="img-wrap-partner">
-											<img class="img-hover-part" src="img/partners/partners2.png" alt="partner">
-										</div>
-									</a>
-								</div>
-								<div class="col-md-4 col-sm-6">
-									<a href="#">
-										<div class="img-wrap-partner">
-											<img src="img/partners/partners3.png" alt="partner">
-										</div>
-									</a>
-								</div>
-								<div class="col-md-4 col-sm-6">
-									<a href="#">
-										<div class="img-wrap-partner">
-											<img src="img/partners/partners4.png" alt="partner">
-										</div>
-									</a>
-								</div>
-								<div class="col-md-4 col-sm-6">
-									<a href="#">
-										<div class="img-wrap-partner">
-											<img src="img/partners/partners5.png" alt="partner">
-										</div>
-									</a>
-								</div>
-								<div class="col-md-4 col-sm-6">
-									<a href="#">
-										<div class="img-wrap-partner">
-											<img src="img/partners/partners6.png" alt="partner">
-										</div>
-									</a>
-								</div>
-								<div class="col-md-4 col-sm-6">
-									<a href="#">
-										<div class="img-wrap-partner">
-											<img class="img-hover-part2" src="img/partners/partners7.png" alt="partner">
-										</div>
-									</a>
-								</div>
-								<div class="col-md-4 col-sm-6">
-									<a href="#">
-										<div class="img-wrap-partner">
-											<img class="img-hover-part2" src="img/partners/partners8.png" alt="partner">
-										</div>
-									</a>
-								</div>
-								<div class="col-md-4 col-sm-6">
-									<a href="#">
-										<div class="img-wrap-partner">
-											<img class="img-hover-part2" src="img/partners/partners9.png" alt="partner">
-										</div>
-									</a>
-								</div>
+								<?php $c++; }}?>
+								
 							</div>
 						</div> <!-- End Meet-partners-block -->
 

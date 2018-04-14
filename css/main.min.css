@@ -7307,9 +7307,10 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
         text-align: center
     }
     .teams-stats-block .info-teams-stats-item .header-text {
-        margin: 0 auto 40px auto;
+        margin: 0 auto 40px auto!important;
         text-align: center
     }
+    
     .teams-stats-block .players-list-item a {
         display: block !important;
         width: 100px;

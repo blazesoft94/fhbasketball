@@ -118,7 +118,7 @@
 						</div>
 						</div>	
 
-						<a href="#" class="btn-view btn btn-link-g"><span>view all events</span></a>
+						<!-- <a href="#" class="btn-view btn btn-link-g"><span>view all events</span></a> -->
 
 					</div> <!-- End row -->
 				</div> <!-- End comtainer -->

@@ -97,6 +97,7 @@ $sql = "CREATE TABLE team_players(
     player_firstname__blazeweb varchar(50) NOT NULL,
     player_lastname__blazeweb varchar(50) NOT NULL,
     player_positions__blazeweb text NOT NULL,
+    player_jerseyNumber__blazeweb varchar(2) NOT NULL,
     player_height__blazeweb varchar(10) NOT NULL,
     player_weight__blazeweb varchar(10) NOT NULL,
     player_image__blazeweb text,
@@ -165,6 +166,7 @@ $sql = "CREATE table sponsors(
     sponsor_id__blazeweb int(5) primary key NOT NULL AUTO_INCREMENT,
     sponsor_image__blazeweb text NOT NULL,
     sponsor_name__blazeweb varchar(100) NOT NULL,
+    sponsor_url__blazeweb varchar(255),
     sponsor_text__blazeweb text,
     sponsor_level__blazeweb int DEFAULT '1'    
 )";
@@ -191,6 +193,12 @@ else{
 
 //INSERT INTO `gallery` (`gallery_id__blazeweb`, `gallery_image__blazeweb`, `gallery_text__blazeweb`) VALUES (NULL, 'IMG_0836', 'Players planning the game.');
 //INSERT INTO `schedules` (`schedule_id__blazeweb`, `schedule_date__blazeweb`, `schedule_time__blazeweb`, `schedule_venue__blazeweb`, `schedule_played__blazeweb`, `schedule_result__blazeweb`, `schedule_opponent__blazeweb`) VALUES (NULL, '2018-04-12', '15:00:00', 'Away', 'Yes', '46-103', 'Some Team'), (NULL, '2018-04-20', '13:00:00', 'Home', 'No', 'NA', 'Other Team'), (NULL, '2018-04-13', '14:00:00', 'Home', 'Yes', '88-92', 'A team'), (NULL, '2018-04-10', '15:00:00', 'Home', 'Yes', '64-61', 'One Team'), (NULL, '2018-04-15', '11:30:00', 'Away', 'No', 'NA', 'Unknown Team'), (NULL, '2018-04-17', '18:00:00', 'Away', 'No', 'NA', 'That Team');
+//INSERT INTO `team_players` (`player_id__blazeweb`, `player_firstname__blazeweb`, `player_lastname__blazeweb`, `player_positions__blazeweb`, `player_height__blazeweb`, `player_weight__blazeweb`, `player_image__blazeweb`, `player_sypnosis__blazeweb`) VALUES (NULL, 'Collins', 'Eguavoen', 'PG', '1.73', '183', NULL, NULL), (NULL, 'Adam', 'Bowley', 'PF', '1.78', '175', NULL, NULL), (NULL, 'Sam', 'Scott', 'SG', '1.85', '180', NULL, NULL), (NULL, 'Chris', 'Baker', 'C', '1.85', '178', NULL, NULL), (NULL, 'Ali', 'Hugo', 'PF', '1.81', '186', NULL, NULL);
+//INSERT INTO `sponsors` (`sponsor_id__blazeweb`, `sponsor_image__blazeweb`, `sponsor_name__blazeweb`, `sponsor_text__blazeweb`, `sponsor_level__blazeweb`) VALUES (NULL, 'nike_logo.jpg', 'Nike', 'One of the best in sports manufacturing. Nike has been supporting us since the beginning.', '1'), (NULL, 'redbull_logo.jpg', 'Redbull', 'Redbull gives you wings! When the players are tired its redbull that gives them the energy.', '1'), (NULL, 'kia_logo.jpg', 'KIA', 'The best in auto mobiles. KIA is a recent sponsor and a very generous one.', '1');
+//UPDATE `sponsors` SET `sponsor_url__blazeweb` = 'https://www.nike.com' WHERE `sponsors`.`sponsor_id__blazeweb` = 1; UPDATE `sponsors` SET `sponsor_url__blazeweb` = 'https://www.redbull.com' WHERE `sponsors`.`sponsor_id__blazeweb` = 2; UPDATE `sponsors` SET `sponsor_url__blazeweb` = 'https://www.kia.com' WHERE `sponsors`.`sponsor_id__blazeweb` = 3;
+//ALTER TABLE `sponsors` ADD `sponsor_imagetype__blazeweb` VARCHAR(10) NOT NULL DEFAULT '.jpg' AFTER `sponsor_image__blazeweb`;
+//UPDATE `sponsors` SET `sponsor_image__blazeweb` = 'nike_logo' WHERE `sponsors`.`sponsor_id__blazeweb` = 1; UPDATE `sponsors` SET `sponsor_image__blazeweb` = 'redbull_logo' WHERE `sponsors`.`sponsor_id__blazeweb` = 2; UPDATE `sponsors` SET `sponsor_image__blazeweb` = 'kia_logo' WHERE `sponsors`.`sponsor_id__blazeweb` = 3;
+//INSERT INTO `gallery` (`gallery_id__blazeweb`, `gallery_image__blazeweb`, `gallery_category__blazeweb`, `gallery_text__blazeweb`) VALUES (NULL, 'attachment_180407022953.jpg', '2', 'A very motivated young player');
 
 
 ?>

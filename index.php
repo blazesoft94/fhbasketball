@@ -3,11 +3,11 @@
 
 <body class="isHome gallery-W">
 	<!-- preloader -->
-	<!-- <div class="pl">
+	<div class="pl">
 		<div class="round1 anti"></div>
 		<div class="pl_r"></div>
 		<div class="pl_l"></div>
-	</div> -->
+	</div>
 
 	<div class="wrapper">
 		<?php include "includes/header_index.php"?>
@@ -405,11 +405,11 @@
 								<div class="col-md-12">
 									<div class="filters-by-category">
 										<ul class="option-set" data-option-key="filter">
-											<!-- <li><a class="btn btn-link-g selected" href="#filter" data-option-value="*"><span>All Photos</span></a></li> -->
-											<!-- <li><a class="btn btn-link-g" href="#filter" data-option-value=".category1"><span>2014 Gallery</span></a></li>
-											<li><a class="btn btn-link-g" href="#filter" data-option-value=".category2"><span>2015 Gallery</span></a></li>
-											<li><a class="btn btn-link-g" href="#filter" data-option-value=".category3"><span>2016 Gallery</span></a></li>
-											<li><a class="btn btn-link-g" href="#filter" data-option-value=".category4"><span>2017 Gallery</span></a></li> -->
+											<li><a class="btn btn-link-g selected" href="#filter" data-option-value="*"><span>All Photos</span></a></li>
+											<li><a class="btn btn-link-g" href="#filter" data-option-value=".category1"><span>Game</span></a></li>
+											<li><a class="btn btn-link-g" href="#filter" data-option-value=".category2"><span>Players</span></a></li>
+											<li><a class="btn btn-link-g" href="#filter" data-option-value=".category3"><span>Staff</span></a></li>
+											<li><a class="btn btn-link-g" href="#filter" data-option-value=".category4"><span>Other</span></a></li>
 										</ul>
 									</div>
 								</div>
@@ -427,7 +427,7 @@
 			$image_name = $row["gallery_image__blazeweb"];
 			$image_text = $row["gallery_text__blazeweb"];
 ?>
-										<div class="gallery__item category1">
+										<div class="gallery__item category<?php echo $row["gallery_category__blazeweb"]?>">
 											<div class="gallery__item__img">
 												<div class="gallery-img-holder"><img src="img/clubGallery/<?php echo $image_name?>" alt="gc"></div>
 												
@@ -475,42 +475,20 @@
 
 								<div class="col-md-12">
 									<div class="carousel-wrap-partners owl-carousel owl-theme">
-
+										<?php
+											$sql = "select * from sponsors";
+											$result = $con->query($sql);
+											if($result->num_rows>0){
+												$c = 0;
+												while($row = $result->fetch_assoc()){
+										?>
 										<div class="carousel-item-partners">
-											<a href="partners.php" class="link-partners" target="_blank">
-												<img src="img/partners/partners1.png" alt="partners">
-											</a>
-										</div> <!--End carousel-item-partners -->
-
-										<div class="carousel-item-partners">
-											<a href="partners.php" class="link-partners" target="_blank">
-												<img class="min-img1" src="img/partners/partners5.png" alt="partners">
+											<a <?php echo ($c%2==0) ? 'class="min-img1"': ""?> href="partners.php" class="link-partners" target="_blank">
+												<img src="img/partners/<?php echo $row["sponsor_image__blazeweb"].$row["sponsor_imagetype__blazeweb"]?>" alt="partners">
 											</a>
 										</div>
-
-										<!-- <div class="carousel-item-partners">
-											<a href="partners.php" class="link-partners" target="_blank">
-												<img  src="img/partners/partners3.png" alt="partners">
-											</a>
-										</div>
-
-										<div class="carousel-item-partners">
-											<a href="partners.php" class="link-partners" target="_blank">
-												<img class="min-img2" src="img/partners/partners4.png" alt="partners">
-											</a>
-										</div>
-
-										<div class="carousel-item-partners">
-											<a href="partners.php" class="link-partners" target="_blank">
-												<img  src="img/partners/partners2.png" alt="partners">
-											</a>
-										</div> 
-
-										<div class="carousel-item-partners">
-											<a href="partners.php" class="link-partners" target="_blank">
-												<img  src="img/partners/partners6.png" alt="partners">
-											</a>
-										</div> -->
+												<?php $c++; }}?>
+										 <!--End carousel-item-partners -->
 
 									</div> <!-- End carousel-wrap-partners -->
 								</div> <!-- End col-md-12 -->

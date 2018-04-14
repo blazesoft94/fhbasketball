@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: RobotoRegular;
     font-style: normal;
@@ -870,6 +871,11 @@ body.Pages header .nav-line>ul>li>a {
 
 .teams-stats-block .info-teams-stats-item {
     margin-top: 45px
+}
+.teams-stats-block .info-teams-stats-item #holder{
+    margin: 0 auto;
+    display:block!important;
+    text-align:center;
 }
 
 .teams-stats-block .info-teams-stats-item .header-text {

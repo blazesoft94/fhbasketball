@@ -43,7 +43,7 @@
 										<li><a class="btn btn-link-g selected" href="#filter" data-option-value="*"><span>All Photos</span></a></li>
 										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category1"><span>Game</span></a></li>
 										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category2"><span>Players</span></a></li>
-										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category3"><span>Faculty &amp; Staff</span></a></li>
+										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category3"><span>Staff</span></a></li>
 										<li><a class="btn btn-link-g" href="#filter" data-option-value=".category4"><span>Others</span></a></li>
 									</ul>
 								</div>
@@ -64,7 +64,7 @@
 											$image_name = $row["gallery_image__blazeweb"];
 											$image_text = $row["gallery_text__blazeweb"];
 								?>
-										<div class="gallery__item category1">
+										<div class="gallery__item category<?php echo $row["gallery_category__blazeweb"] ?>">
 											<div class="gallery__item__img">
 												<div class="gallery-img-holder"><img src="img/clubGallery/<?php echo $image_name?>" alt="gc"></div>
 												

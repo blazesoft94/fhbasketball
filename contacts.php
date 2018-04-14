@@ -79,7 +79,7 @@
 
 								<p><span class="orange-text">American Football Club </span>
 											<br>10106 Plant Dr.
-											<br>Palm Beach Hardens,
+											<br>Palm Beach Gardens,
 											<br>FL 33410
 										</p>
 								<p>For current members: <br><a href="#">info@fhbasketball.com</a></p>
