@@ -3,7 +3,6 @@
 // $username  = "epiz_21907494";
 // $password = "realmadrid94";
 // $dbName = "epiz_21907494_fhbasketball_db";
-
 $server = "localhost";
 $username  = "root";
 $password = "";
@@ -199,6 +198,6 @@ else{
 //ALTER TABLE `sponsors` ADD `sponsor_imagetype__blazeweb` VARCHAR(10) NOT NULL DEFAULT '.jpg' AFTER `sponsor_image__blazeweb`;
 //UPDATE `sponsors` SET `sponsor_image__blazeweb` = 'nike_logo' WHERE `sponsors`.`sponsor_id__blazeweb` = 1; UPDATE `sponsors` SET `sponsor_image__blazeweb` = 'redbull_logo' WHERE `sponsors`.`sponsor_id__blazeweb` = 2; UPDATE `sponsors` SET `sponsor_image__blazeweb` = 'kia_logo' WHERE `sponsors`.`sponsor_id__blazeweb` = 3;
 //INSERT INTO `gallery` (`gallery_id__blazeweb`, `gallery_image__blazeweb`, `gallery_category__blazeweb`, `gallery_text__blazeweb`) VALUES (NULL, 'attachment_180407022953.jpg', '2', 'A very motivated young player');
-
+// ALTER TABLE `users` ADD `user_username__blazeweb` VARCHAR(20) NOT NULL AFTER `user_id__blazeweb`, ADD `user_password__blazeweb` VARCHAR(20) NOT NULL AFTER `user_username__blazeweb`;
 
 ?>

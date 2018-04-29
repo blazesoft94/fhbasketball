@@ -63,7 +63,7 @@
 										
 										?>
 										<tr>
-											<th class="t-center"><?php echo $row["player_jerseyNumber__blazeweb"];?></th>
+											<th class="t-center"><?php echo $row["player_jerseynumber__blazeweb"];?></th>
 											<th><?php echo $row["player_firstname__blazeweb"]." ".$row["player_lastname__blazeweb"];?></th>
 											<th><?php echo $row["player_positions__blazeweb"];?></th>
 											<th><?php echo $row["player_height__blazeweb"];?>m</th>
@@ -139,26 +139,6 @@ Being a basketball player that has experienced the next level, I know and unders
 													<span>know more</span>
 												</a>
 											</div> -->
-
-										</div> <!--End carousel-item-coaches -->
-
-										<div class="carousel-item-coaches coaches-animated3">
-
-											<div class="car-img-wrap">
-												<img src="img/coaches/coaches3.png" alt="icon-coaches">
-											</div>
-
-											<div class="car-text-wrap">
-												<h4>Elmer Ferguson</h4>
-												<h5 class="orange-text">Special Teams Coordinator</h5>
-												<p>Having previously played a variety of positions, Coach Elmer  a niche in Special Teams. Lorem  dolor sit amet.</p>
-											</div>
-
-											<div class="car-btn-wrap">
-												<a href="#" class="btn btn-link-o">
-													<span>know more</span>
-												</a>
-											</div>
 
 										</div> <!--End carousel-item-coaches -->
 

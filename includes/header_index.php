@@ -57,7 +57,7 @@
 						<div class="col-md-10 col-lg-10">
 							<nav id="menu" class="nav-line hidden-sm hidden-xs default">
 								<ul class="menu">
-                                <li <?php  echo ($current_page == "Home") ? "class='active'": "";?>><a href="index.php">Home</a></li>
+                                <li <?php  echo ($current_page == "Home") ? "class='active'": "";?>><a href="http://localhost/fhbasketball/admin/index.php">Home</a></li>
                                 <li <?php  echo ($current_page == "About") ? "class='active'": "";?>><a href="about.php">About</a></li>
                                 <li <?php  echo ($current_page == "Teams") ? "class='active'": "";?>><a href="teams-stats.php">Teams &amp; stats</a></li>
                                 <li <?php  echo ($current_page == "Gallery") ? "class='active'": "";?>><a href="gallery.php">Gallery</a></li>

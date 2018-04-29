@@ -357,28 +357,8 @@
 												</a>
 											</div>
 
-										</div> <!--End carousel-item-coaches -->
-<!-- 
-										<div class="carousel-item-coaches coaches-animated3">
+										</div> <!--End carousel-item-coaches --> 
 
-											<div class="car-img-wrap">
-												<img src="img/coaches/coaches3.png" alt="icon-coaches">
-											</div>
-
-											<div class="car-text-wrap">
-												<h4>Elmer Ferguson</h4>
-												<h5 class="orange-text">Special Teams Coordinator</h5>
-												<p>Having previously played a variety of positions, Coach Elmer  a niche in Special Teams. Lorem  dolor sit amet.</p>
-											</div>
-
-											<div class="car-btn-wrap">
-												<a href="teams-stats.php" class="btn btn-link-o">
-													<span>know more</span>
-												</a>
-											</div>
-
-										</div> -->
-										 <!--End carousel-item-coaches -->
 
 									</div> <!-- End carousel-wrap-coaches -->
 								</div> <!-- End col-md-12 -->
@@ -484,7 +464,7 @@
 										?>
 										<div class="carousel-item-partners">
 											<a <?php echo ($c%2==0) ? 'class="min-img1"': ""?> href="partners.php" class="link-partners" target="_blank">
-												<img src="img/partners/<?php echo $row["sponsor_image__blazeweb"].$row["sponsor_imagetype__blazeweb"]?>" alt="partners">
+												<img width="160" src="img/partners/<?php echo $row["sponsor_image__blazeweb"].$row["sponsor_imagetype__blazeweb"]?>" alt="partners">
 											</a>
 										</div>
 												<?php $c++; }}?>

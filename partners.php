@@ -48,7 +48,7 @@
 									<div class="carousel-item-sponsor">
 
 										<div class="car-img-wrap">
-											<img class="img-sponsor<?php echo $c?>" src="img/partners/<?php echo $row["sponsor_image__blazeweb"]."2".$row["sponsor_imagetype__blazeweb"] ?>" alt="sponsor">
+											<img width="315" height="168" class="img-sponsor<?php echo $c?>" src="img/partners/<?php echo $row["sponsor_image__blazeweb"] ?>" alt="sponsor">
 										</div>
 
 										<div class="car-text-wrap">
@@ -56,7 +56,7 @@
 										</div>
 
 										<div class="car-btn-wrap">
-											<a href="<?php echo $row["sponsor_url__blazeweb"]?>" class="btn btn-link-w">
+											<a target="_blank" href="<?php echo $row["sponsor_url__blazeweb"]?>" class="btn btn-link-w">
 												<span>visit our sponsor</span>
 											</a>
 										</div>
@@ -95,7 +95,7 @@
 								<div class="col-md-4 col-sm-6">
 									<a href="<?php echo $row["sponsor_url__blazeweb"]?>">
 										<div class="img-wrap-partner">
-											<img src="img/partners/<?php echo $row["sponsor_image__blazeweb"].$row["sponsor_imagetype__blazeweb"]?>" alt="partner">
+											<img width="160" src="img/partners/<?php echo $row["sponsor_image__blazeweb"]?>" alt="partner">
 										</div>
 									</a>
 								</div>
