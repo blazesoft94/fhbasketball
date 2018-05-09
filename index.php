@@ -22,7 +22,7 @@
 					<div class="carousel-content center">
 						<div class="text-wrap text-ani1">
 							<div class="text" style="text-shadow:5px 3px 2px rgba(0,0,0,0.8)">
-								<h2>Look Up, Get Up <br> But Never Give Up</h2>
+								<h2>Look Up, Get Up But Never Give Up</h2>
 								<p>You can’t win unless you learn to lose</p>
 							</div>
 						</div>

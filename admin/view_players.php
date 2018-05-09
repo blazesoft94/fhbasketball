@@ -2,7 +2,7 @@
 session_start();
 include "includes/header.php";
 ?>
-<?php if(isset($_SESSION["login"]) && $_SESSION["role"]=="admin"){?>
+<?php if(isset($_SESSION["admin_login"]) && $_SESSION["role"]=="admin"){?>
 <?php 
 //delete post
 // deletePost();
@@ -74,6 +74,26 @@ if(isset($_POST["edit_player"])){
         $sql = "UPDATE `team_players` SET `player_firstname__blazeweb` = '$fname',`player_focus_x__blazeweb` = '$focus_x',`player_focus_y__blazeweb` = '$focus_y',`player_background_position__blazeweb` = '$background', `player_lastname__blazeweb` = '$lname', `player_positions__blazeweb` = '$position', `player_jerseynumber__blazeweb` = '$jersey', `player_height__blazeweb` = '$height', `player_weight__blazeweb` = '$weight', `player_sypnosis__blazeweb` = '$sypnosis' WHERE `team_players`.`player_id__blazeweb` = '$player_id';"; 
        if($con->query($sql)==TRUE){
            $success = true;
+           $degree = (int) $_POST["rotation_degrees"];
+           $degree *= -1;
+           if($degree != 0){
+               $sql = "select player_image__blazeweb from team_players where player_id__blazeweb = '$player_id'";
+               $result = $con->query($sql);
+               $row = $result->fetch_assoc();
+               $img_name = $row["player_image__blazeweb"];
+               $img_path = "../img/players/" . $img_name;
+               $source = imagecreatefromjpeg($img_path);
+               $rotate = imagerotate($source, $degree, 0);
+               $new_name = generateRandomString() . substr($row["player_image__blazeweb"],10);
+               $new_path = "../img/players/" . $new_name;
+               imagejpeg($rotate, $new_path);       
+               unlink($img_path);
+               $sql = "UPDATE `team_players` SET `player_image__blazeweb` = '$new_name' where `player_id__blazeweb` = '$player_id'";
+               if(!($con->query($sql)==TRUE)){
+                   $success = false;
+               }
+           }
+    
             header("Location: view_players.php");
        }
        else{
@@ -114,6 +134,27 @@ if(isset($_POST["add_player"])){
        $sql = "INSERT INTO `team_players` (`player_id__blazeweb`, `player_firstname__blazeweb`, `player_lastname__blazeweb`, `player_positions__blazeweb`, `player_jerseynumber__blazeweb`, `player_height__blazeweb`, `player_weight__blazeweb`, `player_image__blazeweb`,`player_focus_x__blazeweb`,`player_focus_y__blazeweb`,`player_background_position__blazeweb`, `player_sypnosis__blazeweb`) VALUES (NULL, '$fname', '$lname', '$position', '$jersey', '$height', '$weight', '$file_name','$focus_x','$focus_y', '$background','$sypnosis');"; 
        if($con->query($sql)==TRUE){
            $success = true;
+           $degree = (int) $_POST["rotation_degrees"];
+           $degree *= -1;
+           if($degree != 0){
+               $player_id = $con->insert_id;
+               $sql = "select player_image__blazeweb from team_players where player_id__blazeweb = '$player_id'";
+               $result = $con->query($sql);
+               $row = $result->fetch_assoc();
+               $img_name = $row["player_image__blazeweb"];
+               $img_path = "../img/players/" . $img_name;
+               $source = imagecreatefromjpeg($img_path);
+               $rotate = imagerotate($source, $degree, 0);
+               $new_name = generateRandomString() . substr($row["player_image__blazeweb"],10);
+               $new_path = "../img/players/" . $new_name;
+               imagejpeg($rotate, $new_path);       
+               unlink($img_path);
+               $sql = "UPDATE `team_players` SET `player_image__blazeweb` = '$new_name' where `player_id__blazeweb` = '$player_id'";
+               if(!($con->query($sql)==TRUE)){
+                   $success = false;
+               }
+           }
+
             header("Location: view_players.php");
        }
        else{
@@ -147,16 +188,26 @@ if(isset($_POST["add_player"])){
                         <div class="row">
                             <div class="col-md-12">
                                 <button class="btn btn-primary" data-toggle='modal' data-target='#player_add_modal'>Add Player</button><br/><br/>
-                                <table class="table table-bordered table-striped table-hover">
+                                <div class="table-responsive">
+                                <table 
+                                    class="table table-striped table-bordered table-hover table-highlight table-checkable" 
+                                    data-provide="datatable" 
+                                    data-display-rows="10"
+                                    data-info="true"
+                                    data-search="true"
+                                    data-length-change="true"
+                                    data-paginate="true"
+                                
+                                >
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th>Jersey</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Position</th>
+                                            <th data-filterable="true" data-sortable="true">Jersey</th>
+                                            <th data-filterable="true" data-sortable="true">First Name</th>
+                                            <th data-filterable="true" data-sortable="true">Last Name</th>
+                                            <th data-filterable="true" data-sortable="true">Position</th>
                                             <th>Image</th>
-                                            <th>Height (m)</th>
-                                            <th>Weight (lbs)</th>
+                                            <th data-filterable="true" data-sortable="true">Height (m)</th>
+                                            <th data-filterable="true" data-sortable="true">Weight (lbs)</th>
                                             <th>View/Edit</th>
                                             <th>Delete</th>
                                         </tr>
@@ -198,7 +249,7 @@ if(isset($_POST["add_player"])){
                                         </tr> -->
                                     </tbody>
                                 </table>
-                                
+                                </div>    
                             </div>
                         </div>
                     </div>
@@ -245,8 +296,8 @@ if(isset($_POST["add_player"])){
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="title" class="col-form-label">Image (Click on the player's forehead to  the focus points):</label>
-                                <img src="" width="250" class="focus-image" id="player-image" alt="">
+                                <label for="title" class="col-form-label">Image (Click on the player's forehead to get the focus points):</label>
+                                <img src="" width="250" class="img-rotate focus-image" id="player-image" alt="">
                                 <!-- <input type="text" class="form-control" id="player-image" name="player_image"> -->
                             </div>
                         </div>
@@ -256,6 +307,16 @@ if(isset($_POST["add_player"])){
                                         <input class="focus-image-upload" type="file" accept="image/*" name="upl" />
                             </div>
                         </div>
+                    </div>
+                    <div class="row" id="rotation-div" style="display:none;">
+                        <div class="col-md-1">
+                            <input type="text" value="0" id="rotation-degrees" style="display:none" name="rotation_degrees" >
+                        </div>
+                        <div class="col-md-4">
+                            <button data-rotation-for="player-image" data-degree-tag="rotation-degrees" data-direction="left" style="marign:0 auto;display" class="btn btn-warning rotate-image-button" ><i class="fa fa-rotate-left"></i></button>                            
+                            <button data-rotation-for="player-image" data-degree-tag="rotation-degrees" data-direction="right" style="marign:0 auto;" class="btn btn-warning rotate-image-button" ><i class="fa fa-rotate-right"></i></button>                                                     
+                        </div>
+                        <div class="col-md-1"></div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -267,11 +328,23 @@ if(isset($_POST["add_player"])){
                         </div>
                         <div class="col-md-6"></div>
                     </div>
-                    <input type="text" style="display:block" name="player_background" id="player-background" >
-                    <div class="form-group">
-                        <label for="title" class="col-form-label">Height in metres:</label>
-                        <input type="text" class="form-control" id="player-height" name="player_height">
+                    <input type="text" style="display:none" name="player_background" id="player-background" >
+                    <div class="row" id="">
+                    <div class="col-md-6" id="metres-div">  
+                        <div class="form-group">
+                            <label for="title" class="col-form-label">Height in metres:</label>
+                            <input type="number" step=".01" class="form-control" id="player-height" name="player_height">
+                        </div>
                     </div>
+                    <div class="col-md-6">
+                        <div class="form-group" id="feet-div">
+                            <label for="title" class="col-form-label">Height in Feet and inches:</label>
+                            <!-- <p><span id="player-height-feet2">5</span> ft <span id="player-height-inches2">11</span> inches</p> -->
+                                <input type="number" max="8" id="player-height-feet"> ft
+                                <input type="number" step=".1" max="11.9999" id="player-height-inches"> inches
+                        </div>
+                    </div>
+                </div>
                     <div class="form-group">
                         <label for="title" class="col-form-label">Weight in lbs:</label>
                         <input type="text" class="form-control" id="player-weight" name="player_weight">
@@ -335,7 +408,17 @@ if(isset($_POST["add_player"])){
                                 </div>
                             </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="rotation-div2" style="display:none;">
+                        <div class="col-md-1">
+                            <input type="text" value="0" id="rotation-degrees2" style="display:none" name="rotation_degrees" >
+                        </div>
+                        <div class="col-md-4">
+                            <button data-rotation-for="player-image2" data-degree-tag="rotation-degrees2" data-direction="left" style="marign:0 auto;display" class="btn btn-warning rotate-image-button" ><i class="fa fa-rotate-left"></i></button>                            
+                            <button data-rotation-for="player-image2" data-id="2" data-degree-tag="rotation-degrees2" data-direction="right" style="marign:0 auto;" class="btn btn-warning rotate-image-button" ><i class="fa fa-rotate-right"></i></button>                                                     
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="row" >
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="title" class="col-form-label">Focus points (x,y):</label>
@@ -345,11 +428,27 @@ if(isset($_POST["add_player"])){
                         </div>
                         <div class="col-md-6"></div>
                     </div>
-                    <input type="text" style="display:block" name="player_background" id="player-background-2" >                    
-                    
-                    <div class="form-group">
-                        <label for="title" class="col-form-label">Height in metres:</label>
-                        <input type="text" class="form-control" id="player-height2" name="player_height">
+                    <input  style="display:none" type="text" name="player_background" id="player-background-2" >                    
+                    <!-- <div class="form-group" id="">
+                        <label for="title" class="col-form-label">Height units</label>
+                        <button class="btn btn-warning active" id="height-unit-feet2">Ft &amp; in</button>
+                        <button class="btn btn-outline-warning" id="height-unit-metres2">Metres</button>
+                    </div> -->
+                    <div class="row" id="">
+                        <div class="col-md-6" id="metres-div">  
+                            <div class="form-group">
+                                <label for="title" class="col-form-label">Height in metres:</label>
+                                <input type="number" step=".01" class="form-control" id="player-height2" name="player_height">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group" id="feet-div">
+                                <label for="title" class="col-form-label">Height in Feet and inches:</label>
+                                <!-- <p><span id="player-height-feet2">5</span> ft <span id="player-height-inches2">11</span> inches</p> -->
+                                    <input type="number" max="8" id="player-height-feet2"> ft
+                                    <input type="number" max="11.9999" step=".1" id="player-height-inches2"> inches
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="title" class="col-form-label">Weight in lbs:</label>
@@ -371,33 +470,71 @@ if(isset($_POST["add_player"])){
         </div>
     </div>
 </div>
+<!-- <script src="js/jquery-rotate.min.js"></script> -->
 <script>
     var linkElement = document.createElement("link");
     linkElement.rel = "stylesheet";
     linkElement.href = "image_uploader/assets/css/style.css"; //Replace here
     document.head.appendChild(linkElement);
 
-    function readURL(input) {
+    
+    $(".rotate-image-button").click(function(e) {
+        e.preventDefault();
+        var rotationFor = $(this).data("rotation-for");
+        var rotationDirection =( $(this).data("direction") == "left" ? -1 : 1);
+        var degreeTag = $(this).data("degree-tag");
+        var degree = $("#"+degreeTag).val();
+        rotation = (parseInt(degree) + (90*rotationDirection)) % 360; // the mod 360 probably isn't needed
+        console.log(rotation);
+        $("#"+degreeTag).val(rotation);
+        $("#"+rotationFor).css('transform','rotate(' + rotation + 'deg)');
+        $("#"+rotationFor).css('margin-top','30px');
+        $("#"+rotationFor).css('margin-bottom','30px');
+        $("#"+rotationFor).css('margin-left','30px');
+    });
+    $("#player-image").load(function(){
+        $("#rotation-div").css("display","block");
+    });
+    $("#player-image2").load(function(){
+        $("#rotation-div2").css("display","block");
+    });
 
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                $('.focus-image').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
+    var metresToFeet = function(num){
+        var mHeight = parseFloat($("#player-height"+num).val());
+        var totalInches = mHeight * 39.37007874;
+        var feet = parseInt(totalInches/12);
+        var inches = parseFloat(totalInches %12).toFixed(1);
+        $("#player-height-inches"+num).val(inches); 
+        $("#player-height-feet"+num).val(feet); 
+    }
+    var feetToMetres = function(num){
+        var fHeight = ( $("#player-height-inches"+num).val() == "" ? 0 : parseInt($("#player-height-feet"+num).val()));
+        var iHeight = ( $("#player-height-inches"+num).val() == "" ? 0 : parseFloat($("#player-height-inches"+num).val()));
+        var totalInches = (fHeight * 12) + iHeight;
+        var metres = parseFloat(totalInches /  39.37007874).toFixed(2);
+        $("#player-height"+num).val(metres); 
     }
 
-    $(document).ready(function(){
-        
+    $("#player-height2").on("keyup",function(){metresToFeet("2")});
+    $("#player-height2").change(function(){metresToFeet("2")});
+    $("#player-height-feet2, #player-height-inches2").on("keyup",function(){feetToMetres("2")});
+    $("#player-height-feet2, #player-height-inches2").change(function(){feetToMetres("2")});
 
-        $(".focus-image-upload").change(function() {
-        readURL(this);
-        });
-    });
+    $("#player-height").on("keyup",function(){metresToFeet("")});
+    $("#player-height").change(function(){metresToFeet("")});
+    $("#player-height-feet, #player-height-inches").on("keyup",function(){feetToMetres("")});
+    $("#player-height-feet, #player-height-inches").change(function(){feetToMetres("")});
+    
+    
 </script>
 <script src="js/players.js"></script>
 <script type="text/javascript" src="js/jquery.focuspoint.helper-basic.js"></script>
+
+<script src="js/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="js/plugins/datatables/DT_bootstrap.js"></script>
+
+  <script src="js/target-admin.js"></script>
+
 <!-- <script src="image_uploader/assets/js/jquery.knob.js"></script> -->
 
 <!-- jQuery File Upload Dependencies -->

@@ -51,9 +51,9 @@
                     <li class="">
                         <a href="schedule.php"><i class="fa fa-fw fa-calendar"></i> Schedule</a>
                     </li>
-                    <!-- <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Profile</a>
-                    </li> -->
+                    <li>
+                        <a href="landing_slider.php"><i class="fa fa-fw fa-arrows-h"></i> Landing Slider Photos</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

@@ -2,7 +2,7 @@
 session_start();
     include "includes/header.php";
 ?>
-<?php if(isset($_SESSION["login"]) && $_SESSION["role"]=="admin"){?>
+<?php if(isset($_SESSION["admin_login"]) && $_SESSION["role"]=="admin"){?>
 <?php 
 //delete post
 // deleteComment();
@@ -24,6 +24,7 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
     $schedule_played = $_POST["schedule_played"];
     $schedule_time = $_POST["schedule_time"];
     $schedule_venue = $_POST["schedule_venue"];
+    $schedule_tname = $_POST["schedule_tname"];
     // if(empty($schedule_opponent) || empty($schedule_date) || empty($schedule_time) || empty($schedule_played) || empty($result) || empty($schedule_venue) ){
     //     $error = true;
     // }
@@ -31,10 +32,10 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
         $sql="";
         if(isset($_POST["edit_schedule"])){
             $schedule_id = $_POST["schedule_id"];
-            $sql = "UPDATE `schedules` SET `schedule_date__blazeweb` = '$schedule_date', `schedule_time__blazeweb` = '$schedule_time', `schedule_venue__blazeweb` = '$schedule_venue', `schedule_played__blazeweb` = '$schedule_played', `schedule_result__blazeweb` = '$schedule_result', `schedule_opponent__blazeweb` = '$schedule_opponent' WHERE `schedules`.`schedule_id__blazeweb` = '$schedule_id';";
+            $sql = "UPDATE `schedules` SET `schedule_date__blazeweb` = '$schedule_date',`schedule_tname__blazeweb` = '$schedule_tname', `schedule_time__blazeweb` = '$schedule_time', `schedule_venue__blazeweb` = '$schedule_venue', `schedule_played__blazeweb` = '$schedule_played', `schedule_result__blazeweb` = '$schedule_result', `schedule_opponent__blazeweb` = '$schedule_opponent' WHERE `schedules`.`schedule_id__blazeweb` = '$schedule_id';";
         }
         else if(isset($_POST["add_schedule"])){
-            $sql = "INSERT INTO `schedules` (`schedule_id__blazeweb`, `schedule_date__blazeweb`, `schedule_time__blazeweb`, `schedule_venue__blazeweb`, `schedule_played__blazeweb`, `schedule_result__blazeweb`, `schedule_opponent__blazeweb`) VALUES (NULL, '$schedule_date', '$schedule_time', '$schedule_venue', '$schedule_played', '$schedule_result', '$schedule_opponent');";
+            $sql = "INSERT INTO `schedules` (`schedule_id__blazeweb`, `schedule_date__blazeweb`, `schedule_time__blazeweb`, `schedule_venue__blazeweb`, `schedule_played__blazeweb`, `schedule_result__blazeweb`, `schedule_opponent__blazeweb`,`schedule_tname__blazeweb`) VALUES (NULL, '$schedule_date', '$schedule_time', '$schedule_venue', '$schedule_played', '$schedule_result', '$schedule_opponent','$schedule_tname');";
         }
 
         if($con->query($sql)==TRUE){
@@ -69,18 +70,28 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
                             <div class="col-md-12">
                                 <button data-toggle="modal" data-target="#schedule_add_modal" class="btn btn-primary">Add Schedule</button><br/><br/>
                                 <?php echo ($error) ? '<p class="text-danger">*Please fill all the values</p>' : "" ?>
-                                <table class="table table-bordered table-striped table-hover">
-                                    <thead class="thead-dark">
+                                <div class="table-responsive">
+                                <table 
+                                    class="table table-striped table-bordered table-hover table-highlight table-checkable" 
+                                    data-provide="datatable" 
+                                    data-display-rows="10"
+                                    data-info="true"
+                                    data-search="true"
+                                    data-length-change="true"
+                                    data-paginate="true"
+                                >
+                                    <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Played</th>
-                                            <th>Venue</th>
-                                            <th>Opponent</th>
-                                            <th>Result</th>
-                                            <th>Date</th>
-                                            <th>Time</th>
-                                            <th>Edit</th>
-                                            <th>Delete</th>
+                                            <th data-filterable="true" data-sortable="true">#</th>
+                                            <th data-filterable="true" data-sortable="true">Played</th>
+                                            <th data-filterable="true" data-sortable="true">Venue</th>
+                                            <th data-filterable="true" data-sortable="true">Opponent</th>
+                                            <th data-filterable="true" data-sortable="true">Result</th>
+                                            <th data-filterable="true" data-direction="desc" data-sortable="true">Date</th>
+                                            <th data-filterable="true" data-sortable="true">Time</th>
+                                            <th data-filterable="true" data-sortable="true">Tournament Name</th>
+                                            <th data-filterable="true" data-sortable="true">Edit</th>
+                                            <th data-filterable="true" data-sortable="true">Delete</th>
                                             <!-- <th>Competition</th> -->
                                         </tr>
                                     </thead>
@@ -101,6 +112,7 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
                                                 // $s_competition = $row['schedule_competition__blazeweb'];
                                                 $s_date = $row['schedule_date__blazeweb'];
                                                 $s_time = $row['schedule_time__blazeweb'];
+                                                $s_t_name = $row['schedule_tname__blazeweb'];
                                                 echo "<tr>";
                                                 echo "<th scope='row'>{$count}</th>";
                                                 echo "<td>{$s_played}</td>";
@@ -109,6 +121,7 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
                                                 echo "<td>{$s_result}</td>";
                                                 echo "<td>{$s_date}</td>";
                                                 echo "<td>{$s_time}</td>";
+                                                echo "<td>{$s_t_name}</td>";
                                                 echo "<td><a class='show-schedule-edit-modal' href='#' data-id='$s_id'  >Edit</a></td>";
                                                 echo "<td><a href='schedule.php?delete=true&schedule_id={$s_id}'>Delete</a></td>";
                                                 echo "</tr>";
@@ -121,7 +134,8 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
                                         </tr> -->
                                     </tbody>
                                 </table>
-                                
+                                </div>
+                                <!-- end table responsive -->
                             </div>
                         </div>
                     </div>
@@ -164,7 +178,10 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
                             <option class="schedule-away" value="Away">Away</option>
                         </select>
                     </div>
-                   
+                    <div class="form-group">
+                        <label for="title" class="col-form-label">Tournament Name:</label>
+                        <input type="text" class="form-control" id="schedule-tname" name="schedule_tname">
+                    </div>
                     <div class="form-group">
                         <label for="title" class="col-form-label">Opponent:</label>
                         <input type="text" class="form-control" id="schedule-opponent" name="schedule_opponent">
@@ -220,7 +237,10 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
                             <option class="schedule-away" value="Away">Away</option>
                         </select>
                     </div>
-                   
+                   <div class="form-group">
+                        <label for="title" class="col-form-label">Tournament Name:</label>
+                        <input type="text" class="form-control" id="" name="schedule_tname">
+                    </div>
                     <div class="form-group">
                         <label for="title" class="col-form-label">Opponent:</label>
                         <input type="text" class="form-control" id="" name="schedule_opponent">
@@ -253,10 +273,10 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
     link.href = 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css';
     document.head.appendChild(link);
 
-    var link2 = document.createElement('link');
-    link2.rel = 'stylesheet';
-    link2.href = 'css/timepicki.css';
-    document.head.appendChild(link2);
+    // var link2 = document.createElement('link');
+    // link2.rel = 'stylesheet';
+    // link2.href = 'css/timepicki.css';
+    // document.head.appendChild(link2);
 
     var link3 = document.createElement('link');
     link3.rel = 'stylesheet';
@@ -264,9 +284,19 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
     document.head.appendChild(link3);
 </script>
 <script src="js/jquery-ui.js"></script>
-<script type='text/javascript'src='js/timepicki.js'></script>
+<!-- <script type='text/javascript'src='js/timepicki.js'></script> -->
 <script src="js/waitMe.min.js"></script>
 <script src="js/schedule.js"></script>
+
+<!-- <script src="js/libs/jquery-1.10.1.min.js"></script>
+  <script src="js/libs/jquery-ui-1.9.2.custom.min.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script> -->
+
+<script src="js/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="js/plugins/datatables/DT_bootstrap.js"></script>
+
+  <script src="js/target-admin.js"></script>
+
 <script>
     $(document).ready(function(){
         // $( "#datepicker" ).datepicker();
@@ -275,8 +305,7 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
         );
 
         //TIME PICKER
-        $('.timepicker').timepicki({show_meridian:false,show_seconds:true,min_hour_value:0,
-		max_hour_value:23,step_size_hours:1});
+        $('.timepicker').timepicki({show_seconds:true});
         // $('#timepicker').timepicki();
     }); 
 </script>
@@ -286,6 +315,6 @@ if(isset($_POST["edit_schedule"]) || isset($_POST["add_schedule"])){
 ?>
 <?php }
 else{
-    header("Location: ../index.php");
+    header("Location : login.php");
 }
 ?>

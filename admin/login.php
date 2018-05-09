@@ -14,7 +14,6 @@ session_start();
         $stmt = $con->prepare("select * from users where user_username__blazeweb = ? and user_password__blazeweb = ? and user_type__blazeweb='admin'");
         $stmt->bind_param('ss', $uname,$pass);
         // $stmt->bind_param('s', $pass);
-        
         $stmt->execute();
         $result = $stmt->get_result();
         if($result->num_rows>0){
@@ -115,12 +114,9 @@ session_start();
       </div>
    </div>
    <div class="col-md-3"></div>
-   
 </div>
 </div>
 </div>
-
-
 <div class="modal fade" id="forgot">
 <div class="modal-dialog">
    <div class="modal-content">
@@ -128,7 +124,6 @@ session_start();
          <button type="button" class="close" data-dismiss='modal' aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
          <h4 class="modal-title" style="font-size: 32px; padding: 12px;"> Recover Your Password </h4>
       </div>
-
       <div class="modal-body">
          <div class="container-fluid">
             <div class="row">
@@ -143,7 +138,6 @@ session_start();
                   </div>
                </div>
             </div>
-
             <div class="row">
                <div class="col-xs-12 col-sm-12 col-md-12">
                   <div class="form-group">
@@ -158,11 +152,9 @@ session_start();
             </div>
          </div>
       </div>
-
       <div class="modal-footer">
          <div class="form-group">
             <button type="submit" class="btn btn-lg btn-info"> Save <span class="glyphicon glyphicon-saved"></span></button>
-
             <button type="button" data-dismiss="modal" class="btn btn-lg btn-default"> Cancel <span class="glyphicon glyphicon-remove"></span></button>
          </div>
       </div>
@@ -170,10 +162,8 @@ session_start();
 </div>
 </div>
 <script>
-    $(document).ready(function(){
-        
+    $(document).ready(function(){ 
     });
-
 </script>
 </body>
 </html>

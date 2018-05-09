@@ -34,6 +34,7 @@ $(document).ready(function(){
                 modal.find('.modal-body #schedule-opponent').val(obj.schedule_opponent__blazeweb);
                 modal.find('.modal-body #schedule-result').val(obj.schedule_result__blazeweb);
                 modal.find('.modal-body #datepicker').val(obj.schedule_date__blazeweb);
+                modal.find('.modal-body #schedule-tname').val(obj.schedule_tname__blazeweb);
                 // .substr(0,5)
                 modal.find('.modal-body #timepicker').val(obj.schedule_time__blazeweb);
                 modal.find();
