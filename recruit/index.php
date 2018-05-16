@@ -147,31 +147,49 @@
                 <div class="description" style="text-shadow: 1px 1px 2px black;">
                     <h2 class="animate"><?php echo $row["player_firstname__blazeweb"]." ".$row["player_lastname__blazeweb"] ?></h2>
                     <dl class="animate">
-                    <?php if( protectThis("*") ) : ?>
                         <dt>Name:</dt>
                         <dd>
-                            
+
+                        <?php if( protectThis("*") ) : ?>                            
                             <?php echo $row["player_firstname__blazeweb"]." ".$row["player_lastname__blazeweb"] ?>
                             <?php else : ?>
-                                You need to login to view this.
-                            <?php endif; ?>
+                                login to view this.
+                         <?php endif; ?>
                         </dd>
                         <dt>Height:</dt>
                         <dd><?php echo $row["player_height__blazeweb"]?> m</dd>
                         <dt>Weight:</dt>
-                        <dd><?php echo $row["player_weight__blazeweb"]?> Lbs</dd>
+                        <dd>
+                        <?php if( protectThis("*") ) : ?>  
+                            <?php echo $row["player_weight__blazeweb"]?> Lbs
+                        <?php else : ?>
+                                login to view this.
+                         <?php endif; ?>
+                        </dd>
                         <!-- <dt>Website:</dt>
-                        <dd><a href="http://www.johndoe.com">www.johndoe.com</a>
+                        <dd><a href="http://www.blazeweb.herokuapp.com">www.blazeweb.herokuapp.com</a>
                         </dd> -->
                     </dl>
                     <div class="additional-info animate">
-                        <dl>
+                        <dl >
                             <dt>Jersey Number:</dt>
-                            <dd><?php echo $row["player_jerseynumber__blazeweb"]?></dd>
+                            <dd>
+                            <?php if( protectThis("*") ) : ?>                                
+                            <?php echo $row["player_jerseynumber__blazeweb"]?>
+                            <?php else : ?>
+                                login to view this.
+                            <?php endif; ?>
+                            </dd>
                             <dt>Position:</dt>
                             <dd><?php echo $row["player_positions__blazeweb"]?></dd>
-                            <dt>Sypnosis:</dt>
-                            <dd style="max-width:30%;"><?php echo $row["player_sypnosis__blazeweb"]?></dd>
+                            <dt>Synopsis:</dt>
+                            <dd style="max-width:300px; max-height:200px;background-color: rgba(0,0,0,0.5);overflow-y: auto;text-overflow:auto;">
+                                <?php if( protectThis("*") ) : ?> 
+                                    <?php echo $row["player_sypnosis__blazeweb"]?>
+                                <?php else : ?>
+                                    login to view this.
+                                <?php endif; ?>
+                            </dd>
                         </dl>
                     </div>
                 </div>
