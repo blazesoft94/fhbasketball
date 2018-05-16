@@ -77,16 +77,15 @@
 							<div class="contact-info-wrap">
 								<h3>Contact Info</h3>
 
-								<p><span class="orange-text">American Football Club </span>
+								<p><span class="orange-text">Florida Hornets Basketball </span>
 											<br>10106 Plant Dr.
 											<br>Palm Beach Gardens,
 											<br>FL 33410
 										</p>
-								<p>For current members: <br><a href="#">info@fhbasketball.com</a></p>
-								<p>For new members: <br><a href="#">fornew@fhbasketball.com</a></p>
-								<p>Press/Media: <br><a href="#">press@fhbasketball.com</a></p>
-								<p>Sponsorship: <br><a href="#">sponsorship@fhbasketball.com</a></p>
-
+								<p>Email 1: <br><a href="#">kclark@fhbasketball.com</a></p>
+								<p>Email 2: <br><a href="#">Vinny.watkins@fhbasketball.com</a></p>
+								<!-- <p>Press/Media: <br><a href="#">press@fhbasketball.com</a></p>
+								<p>Sponsorship: <br><a href="#">sponsorship@fhbasketball.com</a></p> -->
 								<div class="number-block">
 									<p>Call us:</p>
 									<p class="number">1-561-951-6848</p>

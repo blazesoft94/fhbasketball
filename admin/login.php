@@ -9,14 +9,14 @@ session_start();
     }
     $incorrect = false;
     if(isset($_POST["login"])){
-        $uname = $_POST["uname"];
-        $pass = $_POST["pass"];
+        $uname = htmlspecialchars(mysql_escape_string($_POST["uname"]));
+        $pass = htmlspecialchars(mysql_escape_string($_POST["pass"]));
         $stmt = $con->prepare("select * from users where user_username__blazeweb = ? and user_password__blazeweb = ? and user_type__blazeweb='admin'");
         $stmt->bind_param('ss', $uname,$pass);
         // $stmt->bind_param('s', $pass);
         $stmt->execute();
         $result = $stmt->get_result();
-        if($result->num_rows>0){
+        if($result->num_rows == 1){
             // echo "MATCHEDDDDD";
             $_SESSION["admin_login"] = true;
             $_SESSION["role"] = "admin";

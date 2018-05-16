@@ -350,7 +350,7 @@ if(isset($_POST["add_player"])){
                         <input type="text" class="form-control" id="player-weight" name="player_weight">
                     </div>
                     <div class="form-group">
-                        <label for="title" class="col-form-label">Player Sypnosis:</label>
+                        <label for="title" class="col-form-label">Player Synopsis:</label>
                         <textarea type="text" rows="8" class="form-control" id="player-sypnosis" name="player_sypnosis"></textarea>
                     </div>
                     
@@ -455,7 +455,7 @@ if(isset($_POST["add_player"])){
                         <input type="text" class="form-control" id="player-weight2" name="player_weight">
                     </div>
                     <div class="form-group">
-                        <label for="title" class="col-form-label">Player Sypnosis:</label>
+                        <label for="title" class="col-form-label">Player Synopsis:</label>
                         <textarea type="text" rows="8" class="form-control" id="player-sypnosis" name="player_sypnosis"></textarea>
                     </div>
                     

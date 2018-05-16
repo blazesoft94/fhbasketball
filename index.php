@@ -291,7 +291,7 @@
 												</a>
 											</div> -->
 											<div style="float:left;margin-top:20px;" class=" btn-wrap" >
-												<a style="margin-top:15px;border:2px solid #99c8d3;" href="about.php#about-history" class="btn btn-link-w">
+												<a style="margin-top:15px;border:2px solid #99c8d3;" href="schedule.php" class="btn btn-link-w">
 													<span>Full Schedule</span>
 												</a>
 											</div>
@@ -546,7 +546,7 @@
 																</a>
 															</div>
 
-															<div class="content-wrap">
+															<!-- <div class="content-wrap">
 
 																<a href="https://twitter.com/" target="_blank" class="clearfix bbc">
 																	<div class="bef">
@@ -576,7 +576,7 @@
 																	</div>
 																</a>
 
-															</div>
+															</div> -->
 														</div> <!-- End b-wrap-soc-network -->
 
 													</div> <!-- End col-md-4 -->

@@ -5119,7 +5119,7 @@ body textarea:required:valid {
 .block-Subscribe .bg-subscribe2 {
     display: block;
     position: relative;
-    background-image: url(../img/bg-img-subscribe2.jpg);
+    /* background-image: url(../img/bg-img-subscribe2.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -5908,9 +5908,9 @@ body.Pages .block-Club-Gallery .filters-by-category ul {
     margin: 0 10px
 }
 
-.partners-page-block .sponsors-block .carousel-item-sponsor .car-img-wrap {
+/* .partners-page-block .sponsors-block .carousel-item-sponsor .car-img-wrap {
     height: 170px
-}
+} */
 
 .partners-page-block .sponsors-block .carousel-item-sponsor .car-img-wrap .img-sponsor1 {
     height: 95%;

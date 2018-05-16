@@ -1,6 +1,8 @@
-<?php 
-include "../includes/connect_db.php";
-?>
+<?php ob_start(); ?>
+<?php if (!isset($_SESSION)) session_start(); ?> 
+<?php include_once('login/classes/translate.class.php'); ?>
+<?php include_once('login/classes/check.class.php'); ?>
+<?php include "../includes/connect_db.php";?>
 <!DOCTYPE html>
 
 <html lang="en-US">
@@ -41,13 +43,13 @@ include "../includes/connect_db.php";
                     <span>Player's List</span>
                 </a>
             </li>
-            <!-- <li>
+             <!-- <li>
                 <a href="#" class="new-window" data-toggle="modal" data-target="#modal-blog">
                     <i class="fa fa-pencil"></i>
-                    <span>Blog</span>
+                    <span>Login</span>
                 </a>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
                 <a href="#contact">
                     <i class="fa fa-envelope"></i>
                     <span>Contact</span>
@@ -73,6 +75,28 @@ include "../includes/connect_db.php";
                 <h2 style="display:inline;" class="lead">Recruiting</h2>
             </a>
         </div>
+        <?php if(isset($_SESSION['jigowatt']['username'])) { ?>
+		<ul style="padding-left:5px; padding-right:5px;margin-right:5px;margin-left:5px;" class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+				<p class="navbar-text dropdown-toggle" data-toggle="dropdown" id="userDrop">
+					<a href="#"><?php echo $_SESSION['jigowatt']['username']; ?></a>
+					<b class="caret"></b>
+				</p>
+				<ul class="dropdown-menu">
+		<?php if(in_array(1, $_SESSION['jigowatt']['user_level'])) { ?>
+					<li><a href="login/admin/index.php"><i class="glyphicon glyphicon-home"></i> <?php _e('Control Panel'); ?></a></li>
+					<li><a href="login/admin/settings.php"><i class="glyphicon glyphicon-cog"></i> <?php _e('Settings'); ?></a></li> <?php } ?>
+					<li><a href="login/profile.php"><i class="glyphicon glyphicon-user"></i> <?php _e('My Account'); ?></a></li>
+					<li class="divider"></li>
+					<li><a href="login/logout.php"><?php _e('Sign out'); ?></a></li>
+				</ul>
+			</li>
+		</ul>
+		<?php } else { ?>
+		<ul class="nav navbar-nav navbar-right">
+			<li style="padding-left:5px; padding-right:5px;margin-right:5px;margin-left:5px;"><a href="login/login.php" class="signup-link"><em></em> <strong><?php _e('Sign In | Sign Up'); ?></strong></a></li>
+		</ul>
+		<?php } ?>
         <!-- <button style="float:right;" class="btn btn-outline-warning ml-2 clearfix">Signin</button>
         <button style="float:right;" class="btn btn-outline-warning">SignUp</button> -->
         <!--end brand-->
@@ -123,8 +147,15 @@ include "../includes/connect_db.php";
                 <div class="description" style="text-shadow: 1px 1px 2px black;">
                     <h2 class="animate"><?php echo $row["player_firstname__blazeweb"]." ".$row["player_lastname__blazeweb"] ?></h2>
                     <dl class="animate">
+                    <?php if( protectThis("*") ) : ?>
                         <dt>Name:</dt>
-                        <dd><?php echo $row["player_firstname__blazeweb"]." ".$row["player_lastname__blazeweb"] ?></dd>
+                        <dd>
+                            
+                            <?php echo $row["player_firstname__blazeweb"]." ".$row["player_lastname__blazeweb"] ?>
+                            <?php else : ?>
+                                You need to login to view this.
+                            <?php endif; ?>
+                        </dd>
                         <dt>Height:</dt>
                         <dd><?php echo $row["player_height__blazeweb"]?> m</dd>
                         <dt>Weight:</dt>
@@ -212,7 +243,7 @@ include "../includes/connect_db.php";
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <iframe data-src="blog.html"></iframe>
+            <iframe data-src="login/login.php"></iframe>
         </div>
     </div>
 </div>

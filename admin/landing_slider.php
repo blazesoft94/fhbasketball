@@ -131,7 +131,7 @@ if(isset($_POST["add_lp"])){
                         </h1>
                         <div class="row" id="container">
                             <div class="col-md-12">
-                                <button class="btn btn-primary" data-toggle='modal' data-target='#sponsor_add_modal'>Add Sponsor</button><br/><br/>
+                                <button class="btn btn-primary" data-toggle='modal' data-target='#sponsor_add_modal'>Add Slider Photo</button><br/><br/>
                                 <div class="table-responsive">
                                 <table 
                                     class="table table-striped table-bordered table-hover table-highlight table-checkable" 
@@ -258,7 +258,7 @@ if(isset($_POST["add_lp"])){
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 style="display:inline;" class="display-3 text-primary modal-title" id="exampleModalLabel">Add Sponsor</h4>
+                <h4 style="display:inline;" class="display-3 text-primary modal-title" id="exampleModalLabel">Add Slider Photo</h4>
                 <button type="d-inline button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>

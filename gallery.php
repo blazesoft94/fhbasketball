@@ -54,19 +54,19 @@
 
 									
 								<?php 
-									$sql = "select * from gallery order by gallery_id__blazeweb desc limit 6";
+									$sql = "select * from gallery order by gallery_id__blazeweb desc ";
 									$result = $con->query($sql);
 									$c = 0;
 									if($result->num_rows>0){
 										while($row=$result->fetch_assoc()){
-											if($c>=6){break;}
+											if($c>=30){break;}
 											$c++;
 											$image_name = $row["gallery_image__blazeweb"];
 											$image_text = $row["gallery_text__blazeweb"];
 								?>
 										<div class="gallery__item category<?php echo $row["gallery_category__blazeweb"] ?>">
 											<div class="gallery__item__img">
-												<div class="gallery-img-holder"><img src="img/clubGallery/<?php echo $image_name?>" alt="gc"></div>
+												<div class="gallery-img-holder"><img src="img/clubGallery/<?php echo $image_name?>-thumb.jpg" alt="gc"></div>
 												
 												<a class="hover-link-g mfp-gallery" href="img/clubGallery/<?php echo $image_name?>">
 													<div class="inside">
@@ -85,8 +85,8 @@
 
 							<div class="col-md-12">
 								<div class="btn-wrap-gallery">
-									<a href="#" class="btn btn-link-w">
-										<span>view all gallery</span>
+									<a href="" id="view-more" class="btn btn-link-w">
+										<span>view more</span>
 									</a>
 								</div>
 							</div>
@@ -108,6 +108,22 @@
 	<!-- Load Scripts Start -->
 	<script src="js/libs.js"></script>
 	<script src="js/common.js"></script>
+	
+	<script>
+		// var limit = 0;
+		// $("a#view-more").click(function(e){
+		// 	e.preventDefault();
+		// 	limit+=6;
+		// 	$.ajax({
+		// 		url: "ajax/gallery_get_more.php?limit="+limit,
+		// 		success: function(data){
+		// 			console.log(data);
+		// 			$("#gallery").append(data);
+		// 		}
+		// 	});
+		// });
+
+	</script>
 	<!-- Load Scripts End -->
 
 		<!--[if lt IE 9]>

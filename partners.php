@@ -48,7 +48,7 @@
 									<div class="carousel-item-sponsor">
 
 										<div class="car-img-wrap">
-											<img width="315" height="168" class="img-sponsor<?php echo $c?>" src="img/partners/<?php echo $row["sponsor_image__blazeweb"] ?>" alt="sponsor">
+											<img width="315" height="" class="img-sponsor<?php echo $c?>" src="img/partners/<?php echo $row["sponsor_image__blazeweb"] ?>" alt="sponsor">
 										</div>
 
 										<div class="car-text-wrap">

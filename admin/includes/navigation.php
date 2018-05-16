@@ -45,9 +45,9 @@
                         <a href="sponsors.php"><i class="fa fa-fw fa-paw"></i> Sponsors</a>
                     </li>
                     
-                    <!-- <li>
-                        <a href="users.php"><i class="fa fa-users "></i> Users </a>
-                    </li> -->
+                    <li>
+                        <a href="gallery.php"><i class="fa fa-photo "></i> Gallery</a>
+                    </li>
                     <li class="">
                         <a href="schedule.php"><i class="fa fa-fw fa-calendar"></i> Schedule</a>
                     </li>
